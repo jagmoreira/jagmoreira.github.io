@@ -26,7 +26,7 @@ env.cloudfiles_container = 'my_cloudfiles_container'
 
 # Github Pages configuration
 env.github_pages_branch = 'master'
-env.commit_message = 'Publish site on {}'.format(datetime.date.today().isoformat())
+env.commit_message = "'Publish site on {}'".format(datetime.date.today().isoformat())
 
 # Port for `serve`
 PORT = 8000
