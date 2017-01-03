@@ -6,6 +6,7 @@ Fabric3==1.13.1.post1
 feedgenerator==1.9
 idna==2.2
 Jinja2==2.8.1
+Markdown==2.6.7
 MarkupSafe==0.23
 paramiko==2.1.1
 pelican==3.7.0
