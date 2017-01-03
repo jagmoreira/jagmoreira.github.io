@@ -5,10 +5,12 @@ from __future__ import unicode_literals
 AUTHOR = 'Joao Moreira'
 SITENAME = 'Joao Moreira'
 SITEURL = ''
-BIO = 'lorem ipsum doler umpalum paluuu'
+BIO = 'PhD student. Data scientist. Iron Man fan.'
 PROFILE_IMAGE = "avatar.jpg"
 
 PATH = 'content'
+STATIC_PATHS = ['images', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 TIMEZONE = 'America/Chicago'
 
