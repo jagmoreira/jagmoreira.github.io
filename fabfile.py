@@ -3,6 +3,7 @@ import fabric.contrib.project as project
 import os
 import shutil
 import sys
+import datetime
 try:
     import SocketServer as socketserver
 except ImportError:
@@ -24,7 +25,8 @@ env.cloudfiles_api_key = 'my_rackspace_api_key'
 env.cloudfiles_container = 'my_cloudfiles_container'
 
 # Github Pages configuration
-env.github_pages_branch = "master"
+env.github_pages_branch = 'master'
+env.commit_message = 'Publish site on {}'.format(datetime.date.today().isoformat())
 
 # Port for `serve`
 PORT = 8000
@@ -92,4 +94,6 @@ def publish():
 def gh_pages():
     """Publish to GitHub Pages"""
     rebuild()
-    local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
+    local('ghp-import -b {github_pages_branch} '
+          '-m {commit_message} '
+          '{deploy_path} -p'.format(**env))
