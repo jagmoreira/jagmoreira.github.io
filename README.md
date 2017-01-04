@@ -15,12 +15,31 @@ I like the simple, yet cool ring of `<user>.github.io` (even though I am now usi
 
 I use the [ghp-import](https://github.com/davisp/ghp-import) package to easily publish to GitHub Pages any website updates. It pushes the **output** dir to the **master** branch. **Note that, if the master branch already exists on your GitHub repo it will be destroyed**:
 
-    $ pelican content -o output -s pelicanconf.py
+    $ pelican content -o output -s publishconf.py
     $ ghp-import output
+
+Then, just make sure to add the **output** folder to the `.gitignore` to prevent from accidentally commiting it to the **develop** branch.
 
 The `pelican-quickstart` script will ask you once for all necessary parameters and then will create a `gh-pages` Fabric task that automates the process even more: `$ fab gh_pages`.
 
-Then, just make sure to add the **output** folder to the `.gitignore` to prevent from accidentally commiting it to the **develop** branch.
+By default, `ghp-import` will commit your new build with the message *"Update Documentation"*, which is not very useful. I modified the default `gh_pages` Fabric task to add the current date on commit:
+
+```python
+import datetime
+
+# Github Pages configuration
+env.github_pages_branch = 'master'
+env.commit_message = "'Publish site on {}'".format(datetime.date.today().isoformat())
+
+(...)
+
+def gh_pages():
+    """Publish to GitHub Pages"""
+    rebuild()
+    local('ghp-import -b {github_pages_branch} '
+          '-m {commit_message} '
+          '{deploy_path} -p'.format(**env))
+```
 
 
 ## Development workflow
