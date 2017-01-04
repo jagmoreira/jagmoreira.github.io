@@ -15,7 +15,7 @@ I like the simple, yet cool ring of `<user>.github.io` (even though I am now usi
 
 I use the [ghp-import](https://github.com/davisp/ghp-import) package to easily publish to GitHub Pages any website updates. It pushes the **output** dir to the **master** branch. **Note that, if the master branch already exists on your GitHub repo it will be destroyed**:
 
-    $ pelican content -o output -s publishconf.py
+    $ pelican content -o output -s pelicanconf.py
     $ ghp-import output
 
 Then, just make sure to add the **output** folder to the `.gitignore` to prevent from accidentally commiting it to the **develop** branch.
