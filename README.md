@@ -18,7 +18,9 @@ I use the [ghp-import](https://github.com/davisp/ghp-import) package to easily p
     $ pelican content -o output -s pelicanconf.py
     $ ghp-import output
 
-The `pelican-quickstart` script will ask you once for all necessary parameters and then will create a `gh-pages` Fabric task that automates the process even more: `$ fab gh_pages`
+The `pelican-quickstart` script will ask you once for all necessary parameters and then will create a `gh-pages` Fabric task that automates the process even more: `$ fab gh_pages`.
+
+Then, just make sure to add the **output** folder to the `.gitignore` to prevent from accidentally commiting it to the **develop** branch.
 
 
 ## Development workflow
