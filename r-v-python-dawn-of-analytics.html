@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>R v Python: Dawn of Analytics | Joao Moreira</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="/theme/css/poole.css" />
+		<link rel="stylesheet" href="/theme/css/hyde.css" />
+		<link rel="stylesheet" href="/theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0f">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="/images/avatar.jpg">
+					Joao Moreira
+				</a>
+			</h1>
+			<p>PhD student. Data scientist. Iron Man fan.</p>
+		</div>
+		<nav class="sidebar-nav">
+				<a class="sidebar-nav-item" href="/pages/about.html">About</a>
+		</nav>
+		<nav class="sidebar-nav">
+					<a class="sidebar-nav-icon" href="https://github.com/jagmoreira">
+						<i class="fa fa-github-square fa-2x"></i>
+					</a>
+					<a class="sidebar-nav-icon" href="https://www.linkedin.com/in/joao-moreira">
+						<i class="fa fa-linkedin fa-2x"></i>
+					</a>
+			<a class="sidebar-nav-icon" href="">
+				<i class="fa fa-feed fa-2x"></i>
+			</a>
+		</nav>
+	</div>
+</div>		<div class="content container">
+			<div class="post">
+    <h1 class="post-title">R v Python: Dawn of Analytics</h1>
+    <span class="post-date">July 7, 2016</span>
+    <p>I've just completed a 3-month internship at a startup that does data consulting for chemical engineering companies. It was a great experience overall and I learned a lot, including how to program in R. You see, the Amaral Lab (where I'm currently doing a PhD) is almost exclusively a Python lab. Every now and then other languages attempt to break in but they never get very far (looking at you Matlab). So, among other reasons, I saw this internship as a good opportunity to learn R since it is one of the main programming languages used in the Data Science world in addition to Python.</p>
+<p>A simple google search will yield <a href="https://www.google.com/search?q=R+vs+python">tons of R vs. Python comparisons</a> and people can be very entrenched in either camp. Regardless, not having read such a comparison (true!) before starting my internship I thought I would try to share my fresh yet slightly biased perspective on this data science language war by focusing on a few key points.</p>
+<p>Python is a general-purpose programming language created by Guido van Rossum in 1991. It's a high-level programming language built with a focus on readability and simplicity of syntax. Despite this (or because of this) it is an extremely popular language used in many applications, with an extensive <a href="https://pypi.python.org/pypi">library</a> of third-party packages. R is a programming language created by Ross Ihaka and Robert Gentleman in 1993. Unlike Python, R was developed mainly for use in statistical analysis. Because of its specificity, R is faster than Python in some computations. Just like Python, R also has a very large <a href="https://cloud.r-project.org">repository</a> of packages.</p>
+<p>In terms of syntax, both languages have dynamic typing (no need to specify the type of a variable before assigning a value to it), support loops and conditionals, and use logic and math symbols in mostly the same ways. Python is famous for its use of indentation to delimit blocks of code while R is more "classic" in that it requires curly braces for any block of code longer than a single line.</p>
+<p>In R, variable types (number, string, logical, etc.) can be either a single value or a vector of values, whereas Python has both simple variable types (int, float, string, bool) and collection types (list, tuple, etc.). R also allows lists of variables which are not necessarily vectors! Sometimes, in order to achieve the desired behavior you need to unlist a variable first. I found this very baffling at first. Yet, because of R's built-in vector capabilities there's very little need for explicit for-loops. Consequently, a vector operation in R is usually faster than the equivalent for-loop-based operation. Similar performance in Python would require the array datatype provided by the numpy package.</p>
+<p>The main structure used to analyse data is arguably the dataframe. It's essentially a table of data with convenient properties that allow for manipulation of whole columns/rows of data. It exists natively in R but often the <a href="https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html">dplyr</a> package is used to expand the dataframe manipulation tools. Python also has dataframes via the <a href="http://pandas.pydata.org">Pandas</a> package. In my experience, both languages provide very similar dataframe functionality.</p>
+<p>A very big and important difference between R and Python is how they organize documentation. In R, documentation for several related functions are grouped together. First there's a list of all related functions, then a table with the combined arguments of all the functions, followed by a wall of text explaining what each function does and what the return values are. For an example, see the page for <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/grep.html">grep</a>. In Python, every function is instead documented separately. The arguments and return value are always listed but not always fully explained. The closest Python equivalent to R's grep is the <a href="https://docs.python.org/3/library/re.html">re module</a>.</p>
+<p>Ultimately, most data scientists seek to share their work online. This entails creating a web-app to showcase data and/or visualization while hosting it in a server somewhere. Python users typically turn to <a href="https://www.djangoproject.com">Django</a> or <a href="http://flask.pocoo.org">Flask</a> for the app creation. This process can be quite cumbersome as, much like Python itself, these frameworks are general purpose: Flask is just a bare-bones package for web apps while the more powerful Django has a <a href="https://docs.djangoproject.com/en/1.9/intro/">7-part tutorial</a> on how to make a simple poll!
+The process is much easier with R. Using <a href="http://shiny.rstudio.com">Shiny</a>, a R-based web framework, you can have an interactive web app with plots up and running locally in just a few minutes.</p>
+<p>If you're starting to learn how to program in Python you may be using the excellent <a href="http://jupyter.org">Jupyter Notebook</a>. This browser-based programming tool is great for quick coding and data visualization. The <a href="https://irkernel.github.io">R kernel</a> for Jupyter is relatively new so there are still some kinks, but the tool is in active development so expect improvements soon. Still, R in Jupyter already allows for much of the same testing/visualization available via the python kernel. A solid, and much more powerful, alternative for R programming is <a href="https://www.rstudio.com">RStudio</a> (Shiny was built by the RStudio people). It's a fully featured IDE that is very easy to set up.</p>
+<p>So, where do I stand on this great war? ... Well, nowhere really. As is often the case, the truth lies somewhere in the middle. As I outlined above, Python and R have different strengths and are by no means mutually exclusive. Why choose a single language for all things when you can mix the best of both worlds?</p>
+			</div>
+		</div>
+	</body>
+</html>
