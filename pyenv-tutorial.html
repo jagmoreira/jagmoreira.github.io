@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Pyenv Tutorial | Joao Moreira</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="/theme/css/poole.css" />
+		<link rel="stylesheet" href="/theme/css/hyde.css" />
+		<link rel="stylesheet" href="/theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0f">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="/images/avatar.jpg">
+					Joao Moreira
+				</a>
+			</h1>
+			<p>PhD student. Data scientist. Iron Man fan.</p>
+		</div>
+		<nav class="sidebar-nav">
+				<a class="sidebar-nav-item" href="/pages/about.html">About</a>
+		</nav>
+		<nav class="sidebar-nav">
+					<a class="sidebar-nav-icon" href="https://github.com/jagmoreira">
+						<i class="fa fa-github-square fa-2x"></i>
+					</a>
+					<a class="sidebar-nav-icon" href="https://www.linkedin.com/in/joao-moreira">
+						<i class="fa fa-linkedin fa-2x"></i>
+					</a>
+			<a class="sidebar-nav-icon" href="">
+				<i class="fa fa-feed fa-2x"></i>
+			</a>
+		</nav>
+	</div>
+</div>		<div class="content container">
+			<div class="post">
+    <h1 class="post-title">Pyenv Tutorial</h1>
+    <span class="post-date">July 7, 2014</span>
+    <p>Meet <a href="https://github.com/yyuu/pyenv">pyenv</a>: a simple Python version management tool. Previously known as Pythonbrew, pyenv lets you change the global Python version, install multiple Python versions, set directory (project)-specific Python versions, and yes create/manage virtual python environments ("virtualenv's"). All this is done on *NIX-style machines (Linux and OS X) without depending on Python itself and it works at the user-level–no need for any <code>sudo</code> commands. So let's start!</p>
+<h2>Installation</h2>
+<p>Follow the <a href="https://github.com/yyuu/pyenv#installation">installation instructions</a> or use the <a href="https://github.com/yyuu/pyenv-installer">automatic installer</a>. If you're using a Mac, I highly recommend installing pyenv with <a href="https://github.com/yyuu/pyenv#homebrew-on-mac-os-x">Homebrew</a> (none of that MacPorts shenanigans). Whichever way you decide to go, after checking out the repository, be sure to add a couple of lines to your <code>.bashrc</code> (<code>.bash_profile</code> on Mac) to enable pyenv's auto-complete functionality.</p>
+<h3>Linux/OS X Copy-Paste Install</h3>
+<p>On a Mac replace <code>.bashrc</code> with <code>.bash_profile</code> below.</p>
+<div class="highlight"><pre><span></span>~$ git clone git://github.com/yyuu/pyenv.git .pyenv
+~$ <span class="nb">echo</span> <span class="s1">&#39;export PYENV_ROOT=&quot;$HOME/.pyenv&quot;&#39;</span> &gt;&gt; ~/.bashrc
+~$ <span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bashrc
+~$ <span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(pyenv init -)&quot;&#39;</span> &gt;&gt; ~/.bashrc
+~$ <span class="nb">source</span> ~/.bashrc
+</pre></div>
+
+
+<h3>pyenv Suite Installer</h3>
+<p>This is the one-liner provided by the <a href="https://github.com/yyuu/pyenv-installer">automatic installer</a>.</p>
+<div class="highlight"><pre><span></span>curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+</pre></div>
+
+
+<h2>Walkthrough</h2>
+<div class="highlight"><pre><span></span>~$ pyenv global
+system
+~$ pyenv versions
+* system (set by /home/staff/jmoreira/.pyenv/version)
+</pre></div>
+
+
+<p>Usually you will only have one version of python installed, the system-wide version. That's what's shown in the above command. pyenv now allows you to expand upon this version. Let's start by installing another python version. For instance, let's go now to the cutting edge of python:</p>
+<div class="highlight"><pre><span></span>~$ pyenv install 3.4.0
+Installing readline-6.3...
+Installed readline-6.3 to /home/staff/jmoreira/.pyenv/versions/3.4.0
+
+Installing Python-3.4.0...
+Installed Python-3.4.0 to /home/staff/jmoreira/.pyenv/versions/3.4.0
+</pre></div>
+
+
+<p>(By the way, there is no need to memorize these. <code>pyenv install -list</code> will show all available Python versions to install).</p>
+<div class="highlight"><pre><span></span>~$ pyenv versions
+* system (set by /home/staff/jmoreira/.pyenv/version)
+  3.4.0
+</pre></div>
+
+
+<p>pyenv now lists two python versions. To use python 3.4 as the global one we do:</p>
+<div class="highlight"><pre><span></span>pyenv global 3.4.0
+</pre></div>
+
+
+<p>You can also use pyenv to define a project-specific, or local, version of Python:</p>
+<div class="highlight"><pre><span></span>~$ pyenv global system
+
+~$ mkdir cuting_edge
+~$ cd cuting_edge/
+~/cutting_edge$ pyenv local 3.4.0
+~/cutting_edge$ python -V
+Python 3.4.0
+~/cutting_edge$ cd ..
+~$ python -V
+Python 2.7.6
+</pre></div>
+
+
+<p>It's as simple as that.</p>
+<h2>Virtual Environments</h2>
+<p>To other virtualenv users, the idea of a local Python might seem familiar. Indeed, a local Python created from pyenv is almost like a Python virtual environment. The main difference is that pyenv actually copies an entire Python installation every time you create a new pyenv version. In contrast, virtualenv makes use of symbolic links to decrease the size of the virtualenv's.
+If you can't function without your virtual environments anymore then fear not, for there is a plugin for that: <code>pyenv-virtualenv</code>. This plugin adds complete virtualenv functionality to pyenv:</p>
+<div class="highlight"><pre><span></span>git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+source ~/.bashrc
+
+~$ mkdir virtual_env
+~$ cd virtual_env/
+~/virtual_env$ pyenv virtualenv 3.4.0 venv
+Ignoring indexes: https://pypi.python.org/simple/
+Requirement already satisfied (use --upgrade to upgrade): setuptools in /home/staff/jmoreira/.pyenv/versions/venv/lib/python3.4/site-packages
+Requirement already satisfied (use --upgrade to upgrade): pip in /home/staff/jmoreira/.pyenv/versions/venv/lib/python3.4/site-packages
+Cleaning up...
+
+~/virtual_env$ pyenv versions
+* system (set by /home/staff/jmoreira/.pyenv/version)
+  3.4.0
+  lab_web
+  venv
+</pre></div>
+
+
+<p>Here I used Python 3.4 to create the virtualenv (Note that if you want to create a virtualenv from the system Python, then virtualenv needs to be installed at the system level as well).</p>
+<div class="highlight"><pre><span></span>~/virtual_env$ pyenv activate venv
+(venv) ~/virtual_env$ python -V
+Python 3.4.0
+(venv) ~/virtual_env$ pip list
+pip (1.5.4)
+setuptools (2.1)
+(venv) ~/virtual_env$ pyenv deactivate
+~/virtual_env
+</pre></div>
+
+
+<p>This last command is the recommended way to deactivate the virtualenv. This ensures that pyenv remains working as normal after you leave the virtualenv.</p>
+<p>pyenv's magic works because it actually redefines your Python command:</p>
+<div class="highlight"><pre><span></span>~$ which python
+/home/staff/jmoreira/.pyenv/shims/python
+</pre></div>
+
+
+<p>When you try to run Python, it first looks for a <code>.python-version</code> in the current directory to decide which version of python to run. If it doesn't find this file, then it looks for the user-level file <code>~/.pyenv/version</code>.</p>
+<p>And this is essentially all there is to it. Have fun developing Python code in a safe, environment-friendly way.</p>
+<p>Special thanks to <a href="https://amaral.northwestern.edu/people/pah/">Adam Pah</a> for the tips.</p>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Setting up a new development environment | Joao Moreira</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="/theme/css/poole.css" />
+		<link rel="stylesheet" href="/theme/css/hyde.css" />
+		<link rel="stylesheet" href="/theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0f">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="/images/avatar.jpg">
+					Joao Moreira
+				</a>
+			</h1>
+			<p>PhD student. Data scientist. Iron Man fan.</p>
+		</div>
+		<nav class="sidebar-nav">
+				<a class="sidebar-nav-item" href="/pages/about.html">About</a>
+		</nav>
+		<nav class="sidebar-nav">
+					<a class="sidebar-nav-icon" href="https://github.com/jagmoreira">
+						<i class="fa fa-github-square fa-2x"></i>
+					</a>
+					<a class="sidebar-nav-icon" href="https://www.linkedin.com/in/joao-moreira">
+						<i class="fa fa-linkedin fa-2x"></i>
+					</a>
+			<a class="sidebar-nav-icon" href="">
+				<i class="fa fa-feed fa-2x"></i>
+			</a>
+		</nav>
+	</div>
+</div>		<div class="content container">
+			<div class="post">
+    <h1 class="post-title">Setting up a new development environment</h1>
+    <span class="post-date">January 3, 2017</span>
+    <p><strong>NOTE</strong>: This is an updated version of a <a href="https://amaral.northwestern.edu/resources/guides/setting-new-development-environment">guide I wrote for the Amaral Lab</a>. Since writing the original version, I updated Sublime Text to version 3, changed how version control software is configured, and added Homebrew configuration.</p>
+<p>Setting up your development environment on a new computer can be a pain. You start by installing your favorite editor (sublime, vim, emacs, spacemacs, etc.). After that you need to install all your essential packages and plugins (the ones that make you go <em>"How can your live without XX? This is impossible to work."</em> every time a colleague asks you to check out something on their computer). Then, if you work with a scripting language like python or ruby, you also need to download an interpreter and configure it for your projects. In my work I use pyenv which makes this part super easy. Finally you go into the little details and configure the look and feel of the operating system (shell prompt, aliases, handy functions etc), and also set up all the environment variables that connect all the part... Like I said, setting up a dev environment on a new computer can be a pain.</p>
+<p>Fortunately a lot of programmers have had this problem before, and since most of them hate having to do the same task more than once, they came up with ways to automate this painful and tedious process.</p>
+<p>Nowadays a simple google search will give you access to plenty of scripts for setting up a new dev environment on your system of choice. However during my searches I couldn't find a script that I really liked. They either didn't automate enough parts or automated way more parts than I used. So I decided to write my own custom script, and instead of just sharing it and have it be useful for no one besides myself, I thought I would instead explain how you can make your own setup script.</p>
+<p>This guide will help you set up a development environment on a new Unix system only. That means either Linux flavors or macOS. Sorry Windows!</p>
+<h3>Organizing your dotfiles</h3>
+<p>First things first, in order to automate the setup of your environment you need to have one to begin with. On Unix systems most of the relevant settings for developers are stored in the so-called "dot files". These are are a set of files whose name starts with a “.” and sit in your home directory. Using dotfiles you can customize the look of the terminal, define handy functions aliases and keyboard shortcuts, and configure text-based editors, version control systems, plotting libraries, and much, much more. I'm going to assume you have your own set of dotfiles you are happy with. If you don't have one, just search the web for "sensible dotfiles" and you will find tons of examples.
+Here's some tips to get you started:</p>
+<p><strong>1 - You should always have both a <code>.bashrc</code> and a <code>.bash_profile</code>.</strong>
+Most Unix systems run a non-login shell which, by default, reads first the <code>.bash_profle</code> and then <code>.bashrc</code> (if they exist); on macOS the shell is a login shell, which <em>does not</em> read the <code>.bashrc</code> (<a href="http://apple.stackexchange.com/a/13019">What's this about <em>login</em> and <em>non-login</em> shells?</a>). So, a good way to keep your configuration multi-system, is to have a <code>.bash_profile</code> that just reads from the <code>.bashrc</code>:</p>
+<div class="highlight"><pre><span></span>$ cat ~/.bash_profile
+<span class="o">[</span> -n <span class="s2">&quot;</span><span class="nv">$PS1</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">[</span> -f ~/.bashrc <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> ~/.bashrc
+</pre></div>
+
+
+<p>Then you can write all your configurations in the <code>.bashrc</code>.</p>
+<p><strong>2 - Organize your <code>.bashrc</code> settings by sections.</strong> The order is not very important. In my <code>.bashrc</code> I have: Bash options, exports, <code>PATH</code> variable, aliases, bash completions, prompt, and finally functions. Some terminal commands behave slightly differently on macOS than they do on Linux. This is because macOS is based on BSD (another type of Unix distribution), which defines its own version of popular commands such as <code>ls</code>, <code>ln</code>, <code>cat</code>, <code>head</code>, <code>tail</code>, and others. On macOS, if you use <a href="http://brew.sh/">Homebrew</a> you can install the Linux versions, which are actually written by the GNU foundation:</p>
+<div class="highlight"><pre><span></span>$ brew install coreutils.
+</pre></div>
+
+
+<p>Then modify your <code>PATH</code> like so:</p>
+<div class="highlight"><pre><span></span><span class="c1"># Only modify path if both Homebrew and coreutils are installed</span>
+<span class="k">if</span> <span class="nb">type</span> brew &gt; /dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="o">&amp;&amp;</span> <span class="o">[</span> -d <span class="k">$(</span>brew --prefix coreutils<span class="k">)</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="c1"># Add brew-installed GNU core utilities bin</span>
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>brew --prefix coreutils<span class="k">)</span><span class="s2">/libexec/gnubin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+    <span class="c1"># Add man pages for brew-installed GNU core utilities</span>
+    <span class="nb">export</span> <span class="nv">MANPATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>brew --prefix coreutils<span class="k">)</span><span class="s2">/libexec/gnuman:</span><span class="nv">$MANPATH</span><span class="s2">&quot;</span>
+<span class="k">fi</span>
+</pre></div>
+
+
+<p>This ensures the GNU versions of those commands are the ones loaded in the shell. If you want to keep your configuration general, you need to add some checks in <code>.bashrc</code> to make sure your aliases work as expected in both systems. Here's how you can configure your <code>bash_profile</code> to make <code>ls</code> have colors in both macOS and other Unixes:</p>
+<div class="highlight"><pre><span></span><span class="c1"># Detect which `ls` flavor is in use</span>
+<span class="k">if</span> ls --color &gt;/dev/null 2&gt;<span class="p">&amp;</span>1<span class="p">;</span> <span class="k">then</span> <span class="c1"># GNU `ls`</span>
+    <span class="nv">COLORFLAG</span><span class="o">=</span><span class="s1">&#39;--color&#39;</span>
+    <span class="nv">GROUPDIRS</span><span class="o">=</span><span class="s1">&#39;--group-directories-first&#39;</span>
+    <span class="c1"># GNU ls has much finer resolution so it&#39;s better to put it in its own file</span>
+    <span class="k">if</span> <span class="nb">type</span> dircolors &gt;/dev/null 2&gt;<span class="p">&amp;</span>1<span class="p">;</span> <span class="k">then</span>
+        <span class="o">[</span> -r ~/.dir_colors <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>dircolors -b ~/.dir_colors<span class="k">)</span><span class="s2">&quot;</span>
+    <span class="k">fi</span>
+<span class="k">else</span> <span class="c1"># OS X `ls`</span>
+    <span class="nv">COLORFLAG</span><span class="o">=</span><span class="s1">&#39;-G&#39;</span>
+    <span class="c1"># OS X `ls` does not have this option</span>
+    <span class="nv">GROUPDIRS</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+    <span class="c1"># ls color generator: http://geoff.greer.fm/lscolors/</span>
+    <span class="nb">export</span> <span class="nv">LSCOLORS</span><span class="o">=</span>ExGxFadxCxDaDaabagacad
+<span class="k">fi</span>
+
+<span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s2">&quot;ls  </span><span class="si">${</span><span class="nv">GROUPDIRS</span><span class="si">}</span><span class="s2"> </span><span class="si">${</span><span class="nv">COLORFLAG</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+
+
+<p><strong>3 - If you <code>.bashrc</code> is getting too large, it might be good to move some sections to their own separate files and then source them from the <code>.bashrc</code>.</strong> Here I have my prompt customization and my bash functions defined elsewhere:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> FILE in ~/.<span class="o">{</span>bash_prompt,bash_functions<span class="o">}</span><span class="p">;</span> <span class="k">do</span>
+    <span class="o">[</span> -f <span class="s2">&quot;</span><span class="nv">$FILE</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> . <span class="s2">&quot;</span><span class="nv">$FILE</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="k">done</span>
+<span class="nb">unset</span> FILE
+</pre></div>
+
+
+<p><strong>4 - It's not that important, but to keep your shell environment clean, be sure to <code>unset</code> any variables in your bash files that are not exported nor defined as local.</strong> Otherwise they will always be defined in your shell sessions.</p>
+<p>So these are my dotfiles that I want to have in place in all my development environments:</p>
+<ul>
+<li><code>~/.bash_functions</code></li>
+<li><code>~/.bash_prompt</code></li>
+<li><code>~/.bash_profile</code></li>
+<li><code>~/.bashrc</code></li>
+<li><code>~/.gitconfig</code></li>
+<li><code>~/.gitignore</code></li>
+<li><code>~/.hgrc</code></li>
+<li><code>~/.hgignore</code></li>
+<li><code>~/.vimrc</code></li>
+<li><code>~/.matplotib/matplotlibrc</code></li>
+</ul>
+<p>Because I use ssh a lot to connect between the lab computers I accumulated my own set of ssh configurations so I'm adding this file as well.</p>
+<ul>
+<li><code>~/.ssh/config</code></li>
+</ul>
+<h3>Sublime Text configuration files</h3>
+<p>Some editors keep their configurations files in a dedicated location. If that's your case you need to find it and take note of the files/folders you need when starting again from scratch. Sublime Text, my editor of choice, keeps files in of these locations:</p>
+<ul>
+<li>Ubuntu: <code>~/.config/sublime-text3/</code></li>
+<li>macOS: <code>~/Library/Application Support/Sublime Text 3/</code></li>
+</ul>
+<p>For Sublime you actually should only copy files from your User folder, namely settings, custom build systems, snippets, and theme files:</p>
+<ul>
+<li><code>*.sublime-settings</code></li>
+<li><code>*.sublime-build</code></li>
+<li><code>*.sublime-snippet</code></li>
+<li><code>*.sublime-theme</code></li>
+<li><code>*.tmTheme</code></li>
+</ul>
+<h3>Writing the installer script</h3>
+<p>Now the real work begins! We want a script or series of scripts that we can run on any new system that copies all the files for us. We want this script to be available from anywhere so we should really place it somewhere online. GitHub and Bitbucket are some of the most popular platforms for this purpose. Pick whichever one you're most comfortable with, noting that by default GitHub repos are public while Bitbucket repos are private. Here I'm using GitHub.</p>
+<div class="highlight"><pre><span></span>$ mkdir /path/to/your/project
+$ <span class="nb">cd</span> /path/to/your/project
+$ git init
+$ git remote add origin git@bitbucket.org:joao_moreira/dotfiles.git
+</pre></div>
+
+
+<p>Now we just copy our files inside the repo. Here's what mine looks like.</p>
+<div class="highlight"><pre><span></span>$ ls -R -1 **
+Brewfile
+locate_sublime_config.sh
+setup_dev_env.sh
+
+dotfiles:
+bash_functions
+bash_profile
+bash_prompt
+bashrc
+dir_colors
+gitignore
+matplotlibrc
+screenrc
+ssh_config
+vimrc
+
+sublime_configs/Packages/User:
+<span class="o">(</span>All my Sublime Text stuff<span class="o">)</span>
+
+vc_files: <span class="o">(</span>More on these later<span class="o">)</span>
+gitconfig
+hgrc
+vc_settings.template
+
+$ git add .
+$ git commit -m “Add dotfiles and sublime config”
+$ git push
+</pre></div>
+
+
+<p>Alright. We have our files safely in our repo. Now we just need a script to install these files on demand.</p>
+<h4>Main dotfiles</h4>
+<div class="highlight"><pre><span></span>$ cat setup_dev_env.sh
+<span class="c1">#!/bin/bash</span>
+
+<span class="c1"># Find full directory name where this script is located</span>
+<span class="c1"># http://stackoverflow.com/a/246128</span>
+<span class="nv">CWD</span><span class="o">=</span><span class="k">$(</span> <span class="nb">cd</span> <span class="s2">&quot;</span><span class="k">$(</span> dirname <span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASH_SOURCE</span><span class="p">[0]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">)</span><span class="s2">&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">pwd</span> <span class="k">)</span>
+
+<span class="nb">echo</span> -n <span class="s2">&quot;Sym-linking dotfiles...&quot;</span>
+ln -isv <span class="nv">$CWD</span>/dotfiles/bash_prompt ~/.bash_prompt
+ln -isv <span class="nv">$CWD</span>/dotfiles/bash_functions ~/.bash_functions
+ln -isv <span class="nv">$CWD</span>/dotfiles/bash_profile ~/.bash_profile
+ln -isv <span class="nv">$CWD</span>/dotfiles/screenrc ~/.screenrc
+ln -isv <span class="nv">$CWD</span>/dotfiles/dir_colors ~/.dir_colors
+ln -isv <span class="nv">$CWD</span>/dotfiles/gitignore ~/.gitignore
+ln -isv <span class="nv">$CWD</span>/dotfiles/vimrc ~/.vimrc
+
+<span class="c1"># Matplotlib config lives in different places depending on the OS</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="k">$(</span>uname<span class="k">)</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;Darwin&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    ln -isv <span class="nv">$CWD</span>/dotfiles/matplotlibrc ~/.matplotlib/matplotlibrc
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="k">$(</span>uname<span class="k">)</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;Linux&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    ln -isv <span class="nv">$CWD</span>/dotfiles/matplotlibrc ~/.config/matplotlib/matplotlibrc
+<span class="k">fi</span>
+<span class="nb">echo</span> <span class="s2">&quot;done!&quot;</span>
+</pre></div>
+
+
+<p>As you can see, this script actually creates a symbolic link to the dotfiles in our home directory. This way every time you change your dotfiles you don't have to worry about copying your changes to the "gold standard" dotfiles, you already did it! Just remember to commit your changes to the repo, so they will apply the next time you need to start fresh.
+<strong>NOTE</strong>: If you are already have some dotfiles in your home folder ths script will ask if you want to override them or not.</p>
+<h4>Git and Mercurial configuration files</h4>
+<p>Since these config files typically have your user name and email, you may want to keep them out of the repository, specially if your dotfiles repo is a public one. Yet it's still nice to be able to install them automatically. I solved this issue using a 3-step process:</p>
+<ol>
+<li>
+<p>All non-sensitive configurations (basically everything except username and email) I place in version-controlled files, which are put in place using rsync:</p>
+<div class="highlight"><pre><span></span>rsync -abi <span class="nv">$CWD</span>/vc_files/hgrc ~/.hgrc
+rsync -abi <span class="nv">$CWD</span>/vc_files/gitconfig ~/.gitconfig
+</pre></div>
+
+
+</li>
+<li>
+<p>Then I have a separate sub-script <code>vc_files/vc_settings.local</code>, which is not in the repo, that adds username and email to those files:</p>
+<div class="highlight"><pre><span></span>$ cat vc_files/vc_settings.template
+<span class="c1"># Version control settings</span>
+<span class="c1"># Not in the repository, to prevent people from accidentally committing under my name</span>
+
+<span class="c1"># Git credentials</span>
+git config --global user.name <span class="s2">&quot;John Doe&quot;</span>
+git config --global user.email <span class="s2">&quot;john.doe@mail.com&quot;</span>
+
+<span class="c1"># Mercural credentials</span>
+<span class="nb">echo</span> <span class="s1">&#39;&#39;</span> &gt;&gt; ~/.hgrc
+<span class="nb">echo</span> <span class="s1">&#39;[ui]&#39;</span> &gt;&gt; ~/.hgrc
+<span class="nb">echo</span> <span class="s1">&#39;username = Jonh Doe &lt;doe@mail.com&gt;&#39;</span> &gt;&gt; ~/.hgrc
+<span class="nb">echo</span> <span class="s1">&#39;[trusted]&#39;</span> &gt;&gt; ~/.hgrc
+<span class="nb">echo</span> <span class="s1">&#39;users = john_doe&#39;</span> &gt;&gt; ~/.hgrc
+<span class="nb">echo</span> <span class="s1">&#39;groups = john_doe&#39;</span> &gt;&gt; ~/.hgrc
+
+<span class="o">(</span>modify the template file with your own settings<span class="o">)</span>
+
+$ cp vc_files/vc_settings.template vc_files/vc_settings.local
+</pre></div>
+
+
+<p>Note that the <code>vc_files/vc_settings.template</code> is version-controlled. This way you don't have to rely too much on memory.</p>
+</li>
+<li>
+<p>This sub-script is called during the installation script after the above rsync step:</p>
+<div class="highlight"><pre><span></span><span class="o">(</span>... rest of setup_dev_env.sh<span class="o">)</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;Installing local configuration...&quot;</span>
+<span class="nv">VC_LOCAL</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$CWD</span><span class="s2">/vc_files/vc_settings.local&quot;</span>
+<span class="nv">VC_TEMPLATE</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$CWD</span><span class="s2">/vc_files/vc_settings.template&quot;</span>
+<span class="k">if</span> <span class="o">[</span> -f <span class="nv">$VC_LOCAL</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">source</span> <span class="nv">$VC_LOCAL</span>
+<span class="k">else</span>
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$VC_LOCAL</span><span class="s2"> not found. Did you create it from the template file?&quot;</span>
+    <span class="nb">echo</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\t</span>$<span class="s2"> cp </span><span class="nv">$VC_TEMPLATE</span><span class="s2"> </span><span class="nv">$VC_LOCAL</span><span class="s2">&quot;</span>
+<span class="nb">echo</span>
+</pre></div>
+
+
+</li>
+</ol>
+<h4>Homebrew installation (macOS only)</h4>
+<p><a href="http://brew.sh/">Homebrew</a> is the awesome package manager for macOS. It performs the same function as apt-get on Ubuntu. I use it to manage most of my non-system packages. Fortunately Homebrew is super easy to install programmatically, and using the <code>bundle</code> tap and a <code>Brewfile</code>, you can install all your packages in one fell swoop. The <code>Brewfile</code> lists all your installed packages:</p>
+<div class="highlight"><pre><span></span>$ brew tap Homebrew/bundle
+$ brew bundle
+</pre></div>
+
+
+<p>These two commands create the <code>Brewfile</code> mentioned above. This is Homebrew's version of python's pip requirements file or ruby's Gemfile.</p>
+<p>Now we can write the next section of your setup script:</p>
+<div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Installing Homebrew and useful packages...&quot;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="k">$(</span>uname<span class="k">)</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;Darwin&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+
+    <span class="c1"># Install homebrew if it does not yet exist</span>
+    <span class="k">if</span> ! <span class="nb">type</span> brew &gt;/dev/null 2&gt;<span class="p">&amp;</span>1<span class="p">;</span> <span class="k">then</span>
+        /usr/bin/ruby -e <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">&quot;</span>
+    <span class="k">fi</span>
+
+    <span class="c1"># Then install the packages using Homebrew-bundle</span>
+    brew tap Homebrew/bundle
+    ln -isv <span class="nv">$CWD</span>/Brewfile ~/Brewfile
+    brew bundle -v
+<span class="k">fi</span>
+<span class="nb">echo</span>
+</pre></div>
+
+
+<h4>Sublime Text configuration</h4>
+<p>Here I can't use symlinks because they won't capture any eventual files that will be created if I install any new sublime packages. To account for this I use rsync to keep the configuration synced to the repo.</p>
+<div class="highlight"><pre><span></span><span class="o">(</span>... rest of setup_dev_env.sh<span class="o">)</span>
+
+<span class="nb">echo</span> -n <span class="s2">&quot;Configuring Sublime Text...&quot;</span>
+<span class="nv">SUBL</span><span class="o">=</span><span class="k">$(</span><span class="nv">$CWD</span>/locate_sublime_config.sh<span class="k">)</span>
+rsync -tprhm <span class="nv">$CWD</span>/sublime_configs/ <span class="s2">&quot;</span><span class="nv">$SUBL</span><span class="s2">&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;done!&quot;</span>
+</pre></div>
+
+
+<p>This will sync the configuration files from the repo to the sublime installation location.
+Then in my <code>.bash_functions.sh</code> I have a function that does the reverse:</p>
+<div class="highlight"><pre><span></span><span class="c1"># Backup sublime text settings</span>
+backup_sublime<span class="o">()</span> <span class="o">{</span>
+    <span class="nb">local</span> <span class="nv">REPO_LOCATION</span><span class="o">=</span><span class="k">$(</span>locate_dev_repo<span class="k">)</span>
+    <span class="nb">local</span> <span class="nv">SUBL</span><span class="o">=</span><span class="k">$(</span><span class="nv">$REPO_LOCATION</span>/locate_sublime_config.sh<span class="k">)</span>
+
+    <span class="nb">echo</span>
+    <span class="nb">echo</span> -n <span class="s2">&quot;Backing up Sublime Text configuration...&quot;</span>
+    rsync -tprhm <span class="se">\</span>
+        --include<span class="o">=</span><span class="s2">&quot;/Packages/User/*.sublime-settings&quot;</span> <span class="se">\</span>
+        --include<span class="o">=</span><span class="s2">&quot;/Packages/User/*.sublime-snippet&quot;</span> <span class="se">\</span>
+        --include<span class="o">=</span><span class="s2">&quot;/Packages/User/*.sublime-build&quot;</span> <span class="se">\</span>
+        --include<span class="o">=</span><span class="s2">&quot;/Packages/User/*.sublime-theme&quot;</span> <span class="se">\</span>
+        --include<span class="o">=</span><span class="s2">&quot;/Packages/User/*.tmTheme&quot;</span> <span class="se">\</span>
+        --include <span class="s2">&quot;*/&quot;</span> <span class="se">\</span>
+        --exclude<span class="o">=</span><span class="s2">&quot;*&quot;</span> <span class="se">\</span>
+        --delete-excluded <span class="se">\</span>
+        <span class="s2">&quot;</span><span class="nv">$SUBL</span><span class="s2">/&quot;</span> <span class="s2">&quot;</span><span class="nv">$REPO_LOCATION</span><span class="s2">/sublime_configs&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;done!&quot;</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p>If I change any sublime settings all I need to do is:</p>
+<div class="highlight"><pre><span></span>$ backup_sublime
+</pre></div>
+
+
+<p>and those settings will be backed up!</p>
+<p>The line <code>local REPO_LOCATION=$(locate_dev_repo)</code> calls a <a href="https://github.com/jagmoreira/dotfiles/blob/master/dotfiles/bash_functions">function</a> that does a more complicated version of "Find full directory name where this script is located". You can find it <a href="http://stackoverflow.com/a/246128">here</a>. The reason we can't use the one-liner from earlier (see definition of <code>$CWD</code>) is that when you call this function, <code>.bash_functions.sh</code> will be a symlink, and we need a recursive expression that can "dereference" the link.</p>
+<p>Also, if you're scratching your head at the rsync <code>--include</code> syntax... I've been there too. It took me quite a while to get it to work properly. Basically the reason you have to be so verbose in the file specification is that rsync include/exclude rules are applied to each directory in a depth-first-search manner. If you don't do it this way you either sync all files in all directories or no files at all!</p>
+<p><code>locate_sublime_config.sh</code> is a handy little script that tries to guess which system you're running and returns the location to sublime settings location:</p>
+<div class="highlight"><pre><span></span>$ cat locate_sublime_config.sh
+<span class="c1">#!/bin/bash</span>
+
+<span class="c1"># Finds the location of Sublime Text configurations in several systems</span>
+
+<span class="nv">MACOS_DEFAULT</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/Library/Application Support/Sublime Text 3&quot;</span>
+<span class="nv">LINUX_DEFAULT</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.config/sublime-text-3&quot;</span>
+
+<span class="k">if</span> <span class="o">[</span> -d <span class="s2">&quot;</span><span class="nv">$MACOS_DEFAULT</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nv">SUBL</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$MACOS_DEFAULT</span><span class="s2">&quot;</span>
+<span class="k">elif</span> <span class="o">[</span> -d <span class="s2">&quot;</span><span class="nv">$LINUX_DEFAULT</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nv">SUBL</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$LINUX_DEFAULT</span><span class="s2">&quot;</span>
+<span class="k">else</span>
+    <span class="nv">SUBL</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="k">fi</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$SUBL</span><span class="s2">&quot;</span>
+<span class="nb">unset</span> SUBL
+<span class="nb">unset</span> MACOS_DEFAULT
+<span class="nb">unset</span> LINUX_DEFAULT
+</pre></div>
+
+
+<h4>Installing pyenv</h4>
+<p>I work mainly with python so I include <a href="https://github.com/yyuu/pyenv">pyenv</a> in my setup script. Instead of being dependent on whichever version ship with the OS, with <code>pyenv</code> I can have concurrent, self-contained, python installations. If you're interested in trying it out check out <a href="/pyenv-tutorial.html">my pyenv tutorial</a>!</p>
+<p>Fortunately pyenv has an automatic installer, so we just need one more line in our install script:</p>
+<div class="highlight"><pre><span></span><span class="o">(</span>... rest of setup_dev_env.sh<span class="o">)</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="k">$(</span>uname<span class="k">)</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;Linux&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Installing pyenv...&quot;</span>
+    curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer <span class="p">|</span> bash
+<span class="k">fi</span>
+</pre></div>
+
+
+<p>On a mac machine pyenv is installed as a Homebrew formula so this step is skipped.</p>
+<p>And that's it! With this installer you can be sure to speed up the setup of your development environment.</p>
+<h3>More suggestions</h3>
+<p>If you want to get fancier with your dev setup here are some suggestions:</p>
+<ul>
+<li>Add some command line flags to check for existing files, select what to install, etc.</li>
+<li>For Linux, add a section in <code>setup_dev_env.sh</code> that actually installs Sublime Text.</li>
+<li>For macOS, you can add a dotfile to configure pretty much anything in the OS. More info <a href="https://github.com/mathiasbynens/dotfiles/blob/master/.osx">here</a>.</li>
+</ul>
+<h3>Acknowledgments</h3>
+<p>When writing this guide and my own dotfiles I relied heavily on these great github repos:</p>
+<ul>
+<li><a href="https://github.com/mathiasbynens/dotfiles">https://github.com/mathiasbynens/dotfiles</a></li>
+<li><a href="https://github.com/necolas/dotfiles">https://github.com/necolas/dotfiles</a></li>
+<li><a href="https://github.com/miohtama/sublime-helper">https://github.com/miohtama/sublime-helper</a></li>
+</ul>
+<p>Their authors deserve most of the credit for this guide!</p>
+			</div>
+		</div>
+	</body>
+</html>
