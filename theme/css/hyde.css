@@ -55,9 +55,11 @@ html {
 
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem 0;
   color: rgba(255,255,255,.5);
   background-color: #202020;
+  border-style: solid;
+  border-width: 0 0 5px 0;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -66,7 +68,7 @@ html {
     left: 0;
     bottom: 0;
     width: 18rem;
-    text-align: center;
+   border-width: 0 5px 0 0;
   }
 }
 
@@ -80,7 +82,6 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-size: 3rem;
 }
 
 .sidebar-about .lead {
@@ -89,9 +90,8 @@ html {
 
 .sidebar-about .profile-picture {
   margin: 0 auto;
-  border-radius: 50%;
   border: 2px solid #5b8da2;
-  max-width: 5rem;
+  max-width: 6rem;
 }
 
 /* Sidebar nav */
@@ -216,6 +216,7 @@ a.sidebar-nav-icon.active:focus {
 /* Red */
 .theme-base-08 .sidebar {
   background-color: #ac4142;
+  border-color: #790e0f;
 }
 .theme-base-08 .content a,
 .theme-base-08 .related-posts li a:hover {
@@ -238,6 +239,7 @@ a.sidebar-nav-icon.active:focus {
 /* Orange */
 .theme-base-09 .sidebar {
   background-color: #d28445;
+  border-color: #9f5112;
 }
 .theme-base-09 .content a,
 .theme-base-09 .related-posts li a:hover {
@@ -260,6 +262,7 @@ a.sidebar-nav-icon.active:focus {
 /* Yellow */
 .theme-base-0a .sidebar {
   background-color: #f4bf75;
+  border-color: #c18c42;
 }
 .theme-base-0a .content a,
 .theme-base-0a .related-posts li a:hover {
@@ -282,6 +285,7 @@ a.sidebar-nav-icon.active:focus {
 /* Green */
 .theme-base-0b .sidebar {
   background-color: #90a959;
+  border-color: #5d7626;
 }
 .theme-base-0b .content a,
 .theme-base-0b .related-posts li a:hover {
@@ -304,6 +308,7 @@ a.sidebar-nav-icon.active:focus {
 /* Cyan */
 .theme-base-0c .sidebar {
   background-color: #75b5aa;
+  border-color: #428277;
 }
 .theme-base-0c .content a,
 .theme-base-0c .related-posts li a:hover {
@@ -326,6 +331,7 @@ a.sidebar-nav-icon.active:focus {
 /* Blue */
 .theme-base-0d .sidebar {
   background-color: #6a9fb5;
+  border-color: #376c82;
 }
 .theme-base-0d .content a,
 .theme-base-0d .related-posts li a:hover {
@@ -348,6 +354,7 @@ a.sidebar-nav-icon.active:focus {
 /* Magenta */
 .theme-base-0e .sidebar {
   background-color: #aa759f;
+  border-color: #77426c;
 }
 .theme-base-0e .content a,
 .theme-base-0e .related-posts li a:hover {
@@ -370,6 +377,7 @@ a.sidebar-nav-icon.active:focus {
 /* Brown */
 .theme-base-0f .sidebar {
   background-color: #8f5536;
+  border-color: #5c2203;
 }
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {

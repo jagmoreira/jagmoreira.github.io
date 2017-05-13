@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Updating the micro python version of virtual environments | Joao Moreira</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="/theme/css/poole.css" />
+		<link rel="stylesheet" href="/theme/css/hyde.css" />
+		<link rel="stylesheet" href="/theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+		<!-- RSS -->
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+	</head>
+
+	<body class="theme-base-0f">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="/images/avatar.jpg">
+					Joao Moreira
+				</a>
+			</h1>
+			<p>PhD student. Data scientist. Iron Man fan.</p>
+		</div>
+		<nav class="sidebar-nav">
+				<a class="sidebar-nav-item" href="/pages/about.html">About</a>
+		</nav>
+		<nav class="sidebar-nav">
+					<script type="text/javascript" language="javascript">
+					<!--
+					// Email obfuscator script 2.1 by Tim Williams, University of Arizona
+					// Random encryption key feature coded by Andrew Moulden
+					// This code is freeware provided these four comment lines remain intact
+					// A wizard to generate this code is at http://www.jottings.com/obfuscator/
+					{ coded = "dZ8Z.8J.kZ3ME38@Jk8EF.LZk"
+					  key = "59bOciUfrngQj8xYMmzwFCAyhPBuGLEvt3sJodq1X7k6NpW4TSaIHeVKRl2D0Z"
+					  shift = coded.length
+					  link = ""
+					  for (i=0; i<coded.length; i++) {
+					    if (key.indexOf(coded.charAt(i))==-1) {
+					      ltr = coded.charAt(i)
+					      link += (ltr)
+					    }
+					    else {
+					      ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+					      link += (key.charAt(ltr))
+					    }
+					  }
+					  emailLink = "<a class='sidebar-nav-icon' href='mailto:" + link + "'>"
+					  emailLink += "  <i class='fa fa-envelope fa-2x'></i>"
+					  emailLink += "</a>"
+					  document.write(emailLink)
+					}
+					//-->
+					</script>
+					<noscript>
+						<p class="sidebar-nav">Please enable javascript to email me.</p>
+					</noscript>
+					<a class="sidebar-nav-icon" target="_blank" href="https://github.com/jagmoreira">
+						<i class="fa fa-github-square fa-2x"></i>
+					</a>
+					<a class="sidebar-nav-icon" target="_blank" href="https://www.linkedin.com/in/joao-moreira">
+						<i class="fa fa-linkedin fa-2x"></i>
+					</a>
+			<a class="sidebar-nav-icon" href="">
+				<i class="fa fa-feed fa-2x"></i>
+			</a>
+		</nav>
+	</div>
+</div>		<div class="content container">
+			<div class="post">
+    <h1 class="post-title">Updating the micro python version of virtual environments</h1>
+    <span class="post-date">May 13, 2017</span>
+    <p><strong>TL;DR</strong>: I wrote a <a href="https://gist.github.com/jagmoreira/b922d0524a5b7bc9500ea4b8c372e66b">gist</a> to systematically update the micro version of python for all virtual environments in your system using pyenv!</p>
+<p>Python projects should be implemented inside virtual environments (virtualenvs). If you are not doing it yet, then please start. Right now! Virtualenvs are essential to ensure reproducibility and to keep different projects sand-boxed from each other. You specify a <code>requirements.pip</code> file and a python <strong>A.B</strong> (major and minor) version and anyone else, including future you, should be able to re-create your project results.</p>
+<p>Yet, there is some flexibility in virtualenvs <em>because of the micro version</em>. Python releases follow a A.B.C versioning system, where <strong>C</strong> represents a micro update to a given <strong>A.B</strong> version. These micro updates are reserved for security and bug fixes. As I write this post, the latest <a href="https://docs.python.org/devguide/index.html#status-of-python-branches">active</a> releases from python's <a href="https://www.python.org/downloads/">official page</a> are 3.6.1, 3.5.3, and 2.7.13.</p>
+<p>Since virtualenvs are typically only tied to a <strong>A.B</strong> version, we can improve the security and stability of a project by updating the virtualenv's micro version of python without affecting anything project results.</p>
+<h2>Updating the micro version of a single virtualenv</h2>
+<p>I use pyenv (link) to manage all my version of python, so if I wanted to update the micro version of one of my 3.5.1 projects:</p>
+<div class="highlight"><pre><span></span>$ pyenv versions
+  system
+  3.5.1
+  3.5.1/envs/proj
+</pre></div>
+
+
+<p>First I install the latest 3.5.x version:</p>
+<div class="highlight"><pre><span></span>$ pyenv install 3.5.3
+<span class="o">(</span>...<span class="o">)</span>
+</pre></div>
+
+
+<p>Then I save the packages list of the virtualenvs packages:</p>
+<div class="highlight"><pre><span></span>$ pyenv shell proj
+<span class="o">(</span>proj<span class="o">)</span>$ pip freeze &gt; proj_requirements.pip
+<span class="o">(</span>proj<span class="o">)</span>$ pyenv shell --unset
+</pre></div>
+
+
+<p>Now I can safely remove the old 3.5.1 <code>proj</code>, and create a new <code>proj</code> based on 3.5.3:</p>
+<div class="highlight"><pre><span></span>$ pyenv uninstall proj
+<span class="o">(</span>...<span class="o">)</span>
+$ pyenv virtualenv 3.5.3 proj
+<span class="o">(</span>...<span class="o">)</span>
+</pre></div>
+
+
+<p>Finally I install the packages again to the new venv:</p>
+<div class="highlight"><pre><span></span>$ pyenv shell proj
+<span class="o">(</span>proj<span class="o">)</span>$ pip install -r proj_requirements.pip
+
+$ pyenv versions
+  system
+  3.5.1
+  3.5.3
+  3.5.3/envs/proj
+</pre></div>
+
+
+<p>And voilá.</p>
+<p>If you don't use the base 3.5.1 you can now safely uninstall it:</p>
+<div class="highlight"><pre><span></span>$ pyenv uninstall 3.5.1
+</pre></div>
+
+
+<h2>What if I have a lot of virtualenvs?</h2>
+<p>I hear you. I have 15 different environments spread across both python 2.7 and 3.5 in my lab workstation myself! It would be a pain to go through the above process manually for each one of those virtualenvs, that's why I decided to write a script that does all the work for me!</p>
+<p>The first step is to find all main python versions currently installed:</p>
+<div class="highlight"><pre><span></span>$ pyenv versions
+  system
+  2.7.10
+  2.7.10/envs/foo
+  2.7.10/envs/bar
+  2.7.12/envs/baz
+  3.5.3
+  3.5.3/envs/proj
+  foo
+  bar
+  baz
+  proj
+
+  $ pyenv versions --bare <span class="p">|</span> grep / <span class="p">|</span> cut -f <span class="m">1</span> -d / <span class="p">|</span> uniq
+  2.7.10
+  2.7.12
+  3.5.3
+</pre></div>
+
+
+<p>Next, for each <strong>A.B</strong> version we search for the latest micro version:</p>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="c1"># First update pyenv to get any new python versions</span>
+pyenv update
+
+<span class="c1"># Get currently installed main pythons with derived virtualenvs</span>
+<span class="nv">MAIN_PYTHONS</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>pyenv versions --skip-aliases --bare <span class="p">|</span> grep / <span class="p">|</span> cut -f <span class="m">1</span> -d / <span class="p">|</span> uniq<span class="k">)</span><span class="s2">&quot;</span>
+
+<span class="k">for</span> VERSION in <span class="nv">$MAIN_PYTHONS</span><span class="p">;</span> <span class="k">do</span>
+    <span class="c1"># Get the latest micro version for each A.B python</span>
+    <span class="nv">MAJOR_MINOR</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$VERSION</span> <span class="p">|</span> cut -f 1,2 -d .<span class="k">)</span><span class="s2">&quot;</span>
+    <span class="nv">LATEST_MICRO</span><span class="o">=</span><span class="k">$(</span>pyenv install -l <span class="p">|</span> grep -E <span class="s2">&quot;(^| )</span><span class="nv">$MAJOR_MINOR</span><span class="s2">&quot;</span> <span class="p">|</span> sort -b -V <span class="p">|</span> tail -n <span class="m">1</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^[ \t]*//&#39;</span><span class="k">)</span>
+
+    <span class="c1"># If there are no new micro versions</span>
+    <span class="c1"># we move on to the next main Python</span>
+    <span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$VERSION</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="nv">$LATEST_MICRO</span><span class="s2">&quot;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="nb">echo</span> -n <span class="s2">&quot;Version </span><span class="nv">$VERSION</span><span class="s2"> is already the latest version in the </span><span class="nv">$MAJOR_MINOR</span><span class="s2">.x series.&quot;</span>
+        <span class="k">continue</span>
+    <span class="k">fi</span>
+
+    <span class="nb">echo</span> <span class="s2">&quot;Found a new micro version for python </span><span class="nv">$VERSION</span><span class="s2">!&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$VERSION</span><span class="s2"> -&gt; </span><span class="nv">$LATEST_MICRO</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+
+$ ./update_envs_micro_python.sh
+<span class="o">(</span>...pyenv update...<span class="o">)</span>
+Checking <span class="k">for</span> micro version updates <span class="k">for</span> python 2.7.10.
+Found a new micro version <span class="k">for</span> python 2.7.10!
+2.7.10 -&gt; 2.7.13
+Checking <span class="k">for</span> micro version updates <span class="k">for</span> python 2.7.12.
+Found a new micro version <span class="k">for</span> python 2.7.12!
+2.7.12 -&gt; 2.7.13
+Checking <span class="k">for</span> micro version updates <span class="k">for</span> python 3.5.3.
+Version 3.5.3 is already the latest version in the 3.5.x series.
+</pre></div>
+
+
+<p>I only use virtualenvs derived from the <em>vanilla</em> python versions but it should be easy to adapt the code above for other distributions (anaconda, jython, pypy, etc.).</p>
+<p>Then, for each new micro version, we need to install it, making sure that pip is up-to-date as well (pip 9+ ensures python2-only packages are not installed in python3 environments, and vice-versa):</p>
+<div class="highlight"><pre><span></span><span class="c1"># Install the latest micro and upgrade pip</span>
+pyenv install -s <span class="s2">&quot;</span><span class="nv">$LATEST_MICRO</span><span class="s2">&quot;</span>
+pyenv rehash
+<span class="nb">export</span> <span class="nv">PYENV_VERSION</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$LATEST_MICRO</span><span class="s2">&quot;</span>
+pip install --upgrade pip
+</pre></div>
+
+
+<p>Now all we have to do is find all virtualenvs for each major.minor, so we can apply the procedure I first described at the top of the post:</p>
+<div class="highlight"><pre><span></span><span class="c1"># Get all virtual environments for this minor version</span>
+<span class="nv">VENVS</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>pyenv versions --skip-aliases --bare <span class="p">|</span> grep <span class="nv">$VERSION</span>/ <span class="p">|</span> cut -f <span class="m">3</span> -d /<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nv">N_VENVS</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$VENVS</span><span class="p">|</span> wc -w<span class="k">)</span>
+<span class="nb">echo</span> <span class="s2">&quot;Found </span><span class="nv">$N_VENVS</span><span class="s2"> virtual environments built with python </span><span class="nv">$VERSION</span><span class="s2">.&quot;</span>
+
+<span class="k">for</span> ENV in <span class="nv">$VENVS</span><span class="p">;</span> <span class="k">do</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Upgrading micro python version of &#39;</span><span class="nv">$ENV</span><span class="s2">&#39; virtualenv: </span><span class="nv">$VERSION</span><span class="s2">-&gt; </span><span class="nv">$LATEST_MICRO</span><span class="s2">&quot;</span>
+
+    <span class="nv">ENV_PIP_REQS</span><span class="o">=</span><span class="s2">&quot;__tmp_</span><span class="si">${</span><span class="nv">ENV</span><span class="si">}</span><span class="s2">_requirements.pip&quot;</span>
+
+    <span class="nb">export</span> <span class="nv">PYENV_VERSION</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$ENV</span><span class="s2">&quot;</span>     <span class="c1"># &quot;Activate&quot; the virtualenv</span>
+    pip freeze &gt; <span class="nv">$ENV_PIP_REQS</span>
+    pyenv uninstall -f <span class="s2">&quot;</span><span class="nv">$ENV</span><span class="s2">&quot;</span>
+    pyenv virtualenv <span class="s2">&quot;</span><span class="nv">$LATEST_MICRO</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$ENV</span><span class="s2">&quot;</span>
+    pyenv rehash
+
+    <span class="nb">echo</span> <span class="s2">&quot;Re-installing </span><span class="nv">$ENV</span><span class="s2"> with all its packages.&quot;</span>
+
+    <span class="c1"># PYENV_VERSION is still set. No need to update it since</span>
+    <span class="c1"># it&#39;s just a string with the virtualenv name,</span>
+    <span class="c1"># which did not change.</span>
+    pip install --upgrade pip
+    pip install -r <span class="nv">$ENV_PIP_REQS</span>
+
+<span class="k">done</span>
+</pre></div>
+
+
+<h3>Regarding pandas and statsmodels</h3>
+<p>While I was testing my script, I re-learned that installation of older versions of these packages via requirements file will fail unless their required packages are already installed. Dependency management in python projects was a <a href="https://blog.miguelgrinberg.com/post/the-package-dependency-blues">bit of a pain</a> <a href="https://glyph.twistedmatrix.com/2016/08/python-packaging.html">until recently</a>. My solution for virtualenvs that use old versions of these packages is to install them separately before installing the full requirements:</p>
+<div class="highlight"><pre><span></span><span class="c1"># If numpy is present install it manually, otherwise some</span>
+<span class="c1"># package installations might fail due to mall-formed</span>
+<span class="c1"># installation requirements</span>
+<span class="nv">NUMPY</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>grep <span class="nv">numpy</span><span class="o">=</span> <span class="nv">$ENV_PIP_REQS</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="k">if</span> <span class="o">[[</span> -n <span class="nv">$NUMPY</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+    pip install <span class="nv">$NUMPY</span>
+<span class="k">fi</span>
+
+<span class="c1"># Installation of old versions of statsmodels may fail due to mall-formed</span>
+<span class="c1"># installation requirements. To prevent this, we install all other</span>
+<span class="c1"># packages first then try the full requirements file again</span>
+<span class="k">if</span> <span class="o">[[</span> -n <span class="s2">&quot;</span><span class="k">$(</span>grep statsmodels <span class="nv">$ENV_PIP_REQS</span><span class="k">)</span><span class="s2">&quot;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+    sed -e <span class="s1">&#39;/statsmodels/d&#39;</span> <span class="nv">$ENV_PIP_REQS</span> <span class="p">|</span> pip install -r /dev/stdin
+<span class="k">fi</span>
+pip install -r <span class="nv">$ENV_PIP_REQS</span>
+</pre></div>
+
+
+<p>The reason statsmodels is done differently is because it has several requirements (numpy, scipy, pandas, patsy) that can all be installed in one go via requirements file, if numpy is already installed. There are probably other packages out there that suffer from the same issues. Adapt as necessary to your purposes.</p>
+<h2>Putting it all together</h2>
+<p>I uploaded the full script, with some additional tweaks as a <a href="https://gist.github.com/jagmoreira/b922d0524a5b7bc9500ea4b8c372e66b">public gist</a>.</p>
+<p>Hope it's useful to someone else!</p>
+			</div>
+		</div>
+	</body>
+</html>
