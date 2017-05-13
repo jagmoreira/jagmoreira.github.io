@@ -6,7 +6,7 @@ AUTHOR = 'Joao Moreira'
 SITENAME = 'Joao Moreira'
 SITEURL = ''
 BIO = 'PhD student. Data scientist. Iron Man fan.'
-PROFILE_IMAGE = "avatar.jpg"
+PROFILE_IMAGE = 'avatar.jpg'
 
 PATH = 'content'
 STATIC_PATHS = ['images', 'extra/CNAME']
@@ -18,7 +18,7 @@ DEFAULT_LANG = 'en'
 
 DEFAULT_DATE_FORMAT = '%B %-d, %Y'
 
-THEME = "pelican-hyde"
+THEME = 'pelican-hyde'
 
 DISPLAY_PAGES_ON_MENU = True
 
@@ -31,9 +31,18 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+# Obfuscate email with: http://www.jottings.com/obfuscator/
+# Then replace your `coded` and `key` js variables below
+EMAIL_CODED = 'dZ8Z.8J.kZ3ME38@Jk8EF.LZk'
+EMAIL_KEY = '59bOciUfrngQj8xYMmzwFCAyhPBuGLEvt3sJodq1X7k6NpW4TSaIHeVKRl2D0Z'
+
 # Social widget
-SOCIAL = (('github-square', 'https://github.com/jagmoreira'),
-          ('linkedin', 'https://www.linkedin.com/in/joao-moreira'),)
+SOCIAL = (
+    # Email obfuscated using the above variables
+    ('email', ''),
+    ('github-square', 'https://github.com/jagmoreira'),
+    ('linkedin', 'https://www.linkedin.com/in/joao-moreira'),
+)
 
 DEFAULT_PAGINATION = 10
 
