@@ -4,6 +4,7 @@ cryptography==1.7.1
 docutils==0.13.1
 Fabric3==1.13.1.post1
 feedgenerator==1.9
+ghp-import==0.5.5
 idna==2.2
 Jinja2==2.8.1
 Markdown==2.6.7
