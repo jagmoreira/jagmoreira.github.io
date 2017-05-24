@@ -36,7 +36,6 @@ DISPLAY_PAGES_ON_MENU = True
 LOAD_CONTENT_CACHE = False
 
 # Feed generation is usually not desired when developing
-FEED_DOMAIN = SITEURL
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
