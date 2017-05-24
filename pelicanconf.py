@@ -12,6 +12,17 @@ PATH = 'content'
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ['assets']
+
+# Disable caching and versioning of static resources since GitHub pages
+# caches stuff for only 10 mins
+ASSET_CONFIG = (
+    ('url_expire', False),
+    ('manifest', False),
+    ('cache', False),
+)
+
 TIMEZONE = 'America/Chicago'
 
 DEFAULT_LANG = 'en'

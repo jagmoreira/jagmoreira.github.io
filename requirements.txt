@@ -1,6 +1,7 @@
 blinker==1.4
 cffi==1.9.1
 cryptography==1.7.1
+cssmin==0.2.0
 docutils==0.13.1
 Fabric3==1.13.1.post1
 feedgenerator==1.9
@@ -18,3 +19,4 @@ python-dateutil==2.6.0
 pytz==2016.10
 six==1.10.0
 Unidecode==0.4.19
+webassets==0.12.1
