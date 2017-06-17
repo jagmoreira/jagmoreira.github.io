@@ -4,12 +4,13 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Joao Moreira'
 SITENAME = 'Joao Moreira'
+SITESUBTITLE = 'Data Scientist'
 SITEURL = ''
 BIO = 'PhD student. Data scientist. Iron Man fan.'
 PROFILE_IMAGE = 'avatar.jpg'
 
 PATH = 'content'
-STATIC_PATHS = ['images', 'extra/CNAME']
+STATIC_PATHS = ['images', 'pdfs', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 PLUGIN_PATHS = ['pelican-plugins']
