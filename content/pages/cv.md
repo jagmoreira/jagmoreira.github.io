@@ -6,8 +6,8 @@ Date: 2017-06-17
 
 ## Education
 
-* **Ph.D.** Chemical Engineering. [*Northwestern University*](http://www.northwestern.edu/) (2011 — Present)
-    * Expected graduation: Aug 2017
+* **Ph.D.** Chemical Engineering. [*Northwestern University*](http://www.northwestern.edu/) (2012 — 2017)
+    * Thesis: *The Effect of Gender Diversity in Creative Teams*
 * **M.Sc.** Statistical and Non-Linear Physics. [*University of Lisbon*](https://www.ulisboa.pt/en/) (2009 — 2011)
     * Thesis: *Evolutionary Dynamics of Cooperation in Multiplayer Games*
 * **B.Sc.** Physics. [*University of Lisbon*](https://www.ulisboa.pt/en/) (2006 — 2009)
@@ -15,13 +15,13 @@ Date: 2017-06-17
 
 ## Work experience
 
-* [*Northwestern University*](http://www.northwestern.edu/). **Data Scientist** & **Instructor** (Dec. 2011 — Present)
+* [*Northwestern University*](http://www.northwestern.edu/). **Data Scientist** & **Instructor** (Jan. 2012 — Sep. 2017)
     * Used maximum likelihood estimation to parameterize the distribution of the impact of scientific publications (~1TB dataset)
-    * Created a Django web application to showcase my research: [http://forecite.us](http://forecite.us)
-    * Performed time-series analysis on IMDb metadata of +15k movies
-    * Developed course materials and was an instructor for [*Introduction to Python Programming and Data Science Bootcamp*](https://amarallab.github.io/Introduction-to-Python-Programming-and-Data-Science/)
-    * TA for Process Control, Quantum Mechanics, Mass Transfer
-    * Mentored 2 younger graduate students and 2 high-school interns
+    * Constructed a Django web application with interactive D3.js visualizations to showcase my data-driven ranking of scientific research: [http://forecite.us](http://forecite.us)
+    * Demonstrated the existence of historical gender discrimination in the movie industry by performing time-series analysis on IMDb metadata of +15k movies
+    * Created and delivered original course materials on web-scraping and object-oriented programming to over 100 students in 2 sessions of a 1-week long [Python programming bootcamp](https://amarallab.github.io/Introduction-to-Python-Programming-and-Data-Science/)
+    * Organized and led discussion groups, and graded homeworks for all students in 4 undergraduate courses
+    * Mentored 2 younger graduate students and 2 high-school interns on the principles of scientific research and basics of programming
 * [*GadflyZone*](http://gadflyzone.com/). **Data Science Intern** (Apr. 2016 – Sep. 2016)
     * Constructed MySQL database of patents on Amazon Database Relational Services built from publicly available patent information
     * Used natural language processing and citation analysis to design a multidimensional scoring engine to predict a company's innovativeness

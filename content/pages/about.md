@@ -2,7 +2,7 @@ Title: About
 Date: 2016-12-16
 
 Hi, my name is João Moreira. I'm a budding data scientist from Portugal.
-Since 2011 I have been at Northwestern University in Chicago doing my PhD in the
+Since 2012 I have been at Northwestern University in Chicago doing my PhD in the
 [Amaral Lab](https://amaral.northwestern.edu).
 
 My research is in the cool field of *Science of Science*. Specifically, I work on quantifying the impact of scientific works and the effect of gender on creative (scientific and film) teams. I have created a simple, yet comprehensive indicator of impact called [foreCite](http://forecite.us/).
