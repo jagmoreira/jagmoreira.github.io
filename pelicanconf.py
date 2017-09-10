@@ -6,7 +6,7 @@ AUTHOR = 'Joao Moreira'
 SITENAME = 'Joao Moreira'
 SITESUBTITLE = 'Data Scientist'
 SITEURL = ''
-BIO = 'PhD student. Data scientist. Iron Man fan.'
+BIO = 'Data scientist. Iron Man fan.'
 PROFILE_IMAGE = 'avatar.jpg'
 
 PATH = 'content'

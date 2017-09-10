@@ -1,1 +1,5 @@
+## MacOS stuff
+.DS_Store
+
+## Pelican-generated html and css files live in a separate branch
 output

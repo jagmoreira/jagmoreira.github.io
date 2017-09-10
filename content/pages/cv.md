@@ -15,7 +15,7 @@ Date: 2017-06-17
 
 ## Work experience
 
-* [*Northwestern University*](http://www.northwestern.edu/). **Data Scientist** & **Instructor** (Jan. 2012 — Sep. 2017)
+* [*Northwestern University*](http://www.northwestern.edu/). **Data Scientist & Instructor** (Jan. 2012 — Sep. 2017)
     * Used maximum likelihood estimation to parameterize the distribution of the impact of scientific publications (~1TB dataset)
     * Constructed a Django web application with interactive D3.js visualizations to showcase my data-driven ranking of scientific research: [http://forecite.us](http://forecite.us)
     * Demonstrated the existence of historical gender discrimination in the movie industry by performing time-series analysis on IMDb metadata of +15k movies
