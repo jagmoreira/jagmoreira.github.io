@@ -16,19 +16,18 @@ Date: 2017-06-17
 ## Work experience
 
 * [*Northwestern University*](http://www.northwestern.edu/). **Data Scientist & Instructor** (Jan. 2012 — Sep. 2017)
-    * Used maximum likelihood estimation to parameterize the distribution of the impact of scientific publications (~1TB dataset)
-    * Constructed a Django web application with interactive D3.js visualizations to showcase my data-driven ranking of scientific research: [http://forecite.us](http://forecite.us)
-    * Demonstrated the existence of historical gender discrimination in the movie industry by performing time-series analysis on IMDb metadata of +15k movies
-    * Created and delivered original course materials on web-scraping and object-oriented programming to over 100 students in 2 sessions of a 1-week long [Python programming bootcamp](https://amarallab.github.io/Introduction-to-Python-Programming-and-Data-Science/)
-    * Organized and led discussion groups, and graded homeworks for all students in 4 undergraduate courses
-    * Mentored 2 younger graduate students and 2 high-school interns on the principles of scientific research and basics of programming
+    * Used maximum likelihood estimation to parameterize the distribution of the impact of scientific publications (~1TB dataset).
+    * Constructed a Django web application with interactive D3.js visualizations to showcase my data-driven ranking of scientific research: [http://forecite.us](http://forecite.us).
+    * Demonstrated the existence of historical gender discrimination in the movie industry by performing time-series analysis on IMDb metadata of +15k movies.
+    * Created and delivered original course materials on web-scraping and object-oriented programming to over 100 students in 2 sessions of a 1-week long [Python programming bootcamp](https://amarallab.github.io/Introduction-to-Python-Programming-and-Data-Science/).
+    * Organized and led discussion groups, and graded homeworks for all students in 4 undergraduate courses.
+    * Mentored 2 younger graduate students and 2 high-school interns on the principles of scientific research and basics of programming.
 * [*GadflyZone*](http://gadflyzone.com/). **Data Science Intern** (Apr. 2016 – Sep. 2016)
-    * Constructed MySQL database of patents on Amazon Database Relational Services built from publicly available patent information
-    * Used natural language processing and citation analysis to design a multidimensional scoring engine to predict a company's innovativeness
+    * Constructed MySQL database of patents on Amazon Database Relational Services built from publicly available patent information.
+    * Used natural language processing and citation analysis to design a multidimensional scoring engine to predict a company's innovativeness.
 
 * [*Narrative Science*](https://narrativescience.com/). **Software Engineer** (Jun. 2014 – Sep. 2014)
-    * Developed Python tools to automatically gather and perform statistical analysis of stories written by [Quill](https://narrativescience.com/Platform), Narrative Science's patented artificial intelligence platform
-    * Used Quill to collect the most relevant metrics from the stories' analysis and to generate an email report that produced insight about the inner workings of the platform
+    * Developed system to automatically analyze performance of the company's artificial intelligence platform.
 
 ## Peer-reviewed publications
 
