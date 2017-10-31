@@ -15,6 +15,8 @@ Date: 2017-06-17
 
 ## Work experience
 
+* [*Cars.com*](https://www.cars.com/). **Data Scientist II** (Oct. 2017 - Present)
+
 * [*Northwestern University*](http://www.northwestern.edu/). **Data Scientist & Instructor** (Jan. 2012 — Sep. 2017)
     * Used maximum likelihood estimation to parameterize the distribution of the impact of scientific publications (~1TB dataset).
     * Constructed a Django web application with interactive D3.js visualizations to showcase my data-driven ranking of scientific research: [http://forecite.us](http://forecite.us).
@@ -22,6 +24,7 @@ Date: 2017-06-17
     * Created and delivered original course materials on web-scraping and object-oriented programming to over 100 students in 2 sessions of a 1-week long [Python programming bootcamp](https://amarallab.github.io/Introduction-to-Python-Programming-and-Data-Science/).
     * Organized and led discussion groups, and graded homeworks for all students in 4 undergraduate courses.
     * Mentored 2 younger graduate students and 2 high-school interns on the principles of scientific research and basics of programming.
+
 * [*GadflyZone*](http://gadflyzone.com/). **Data Science Intern** (Apr. 2016 – Sep. 2016)
     * Constructed MySQL database of patents on Amazon Database Relational Services built from publicly available patent information.
     * Used natural language processing and citation analysis to design a multidimensional scoring engine to predict a company's innovativeness.
