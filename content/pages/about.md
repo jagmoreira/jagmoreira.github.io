@@ -1,8 +1,8 @@
 Title: About
 Date: 2016-12-16
+Modified: 2019-02-23
 
-Hi, my name is João Moreira. I'm a budding data scientist from Portugal.
-I'm currently looking for new opportunities in the data science scene in Chicago.
+Hi, my name is João Moreira. I'm a data scientist working for Cars.com currently developing real-time recommendation systems to help users find the vehicle that best suits them.
 
 I have a PhD from Northwestern University. My research involved quantifying the effect of gender diversity in creative (scientific and film) teams. I found that work by more diverse teams tends to have a higher impact, and that concentration of power in small homogeneous groups of leaders can lead to an overall gender discrimination. I have also created a simple, yet principled system to evaluate scientific impact called [foreCite](http://forecite.us/).
 
@@ -14,7 +14,6 @@ Here's a random assortment of stuff I know something about:
 * Finding cool datasets to analyze
 * Building websites in `Django` and `Pelican`
 * Creating MongoDB and MySQL databases
-* Breaking and fixing Linux systems (So far break == fix)
 
 You can find a full breakdown of my skills and experience [here]({filename}/pages/cv.md).
 
