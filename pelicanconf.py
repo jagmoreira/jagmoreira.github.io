@@ -10,8 +10,15 @@ BIO = 'Data scientist. Iron Man fan.'
 PROFILE_IMAGE = 'avatar.jpg'
 
 PATH = 'content'
-STATIC_PATHS = ['images', 'pdfs', 'extra/CNAME']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+STATIC_PATHS = ['images', 'pdfs', 'extra']
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': {'path': 'CNAME'},
+    'extra/favicon.png': {'path': 'favicon.png'},
+    'extra/apple-touch-icon.png': {'path': 'apple-touch-icon.png'}
+}
+
+FAVICON = EXTRA_PATH_METADATA['extra/favicon.png']['path']
+APPLE_ICON = EXTRA_PATH_METADATA['extra/apple-touch-icon.png']['path']
 
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['assets']
