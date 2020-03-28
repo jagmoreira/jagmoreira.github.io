@@ -1,89 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<link href="//gmpg.org/xfn/11" rel="profile">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <head>
+        <link href="//gmpg.org/xfn/11" rel="profile">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-		<!-- Enable responsiveness on mobile devices-->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Enable responsiveness on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>Updating the micro python version of virtual environments | Joao Moreira - Data Scientist</title>
+        <title>Updating the micro python version of virtual environments | Joao Moreira - Data Scientist</title>
 
-		<!-- CSS -->
-		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
-		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
-		<link rel="stylesheet" href="https://jagmoreira.com/theme/css/style.min.css">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <!-- CSS -->
+        <link href="//fonts.googleapis.com/" rel="dns-prefetch">
+        <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="https://jagmoreira.com/theme/css/style.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
         <!-- Icons -->
-        <link rel="icon" href="https://jagmoreira.com/favicon.png" type="image/png">
-        <link rel="apple-touch-icon" href="https://jagmoreira.com/apple-touch-icon.png">
+            <link rel="icon" href="https://jagmoreira.com/favicon.png" type="image/png">
+            <link rel="apple-touch-icon" href="https://jagmoreira.com/apple-touch-icon.png">
 
-		<!-- RSS and ATOM feeds -->
-			<link rel="alternate" type="application/atom+xml" title="Joao Moreira Atom Feed" href="https://jagmoreira.com/feeds/all.atom.xml">
-        	<link rel="alternate" type="application/atom+xml" title="Joao Moreira Categories Atom Feed" href="https://jagmoreira.com/feeds/development.atom.xml">
-	</head>
+        <!-- RSS and ATOM feeds -->
+            <link rel="alternate" type="application/atom+xml" title="Joao Moreira Atom Feed" href="https://jagmoreira.com/feeds/all.atom.xml">
+            <link rel="alternate" type="application/atom+xml" title="Joao Moreira Categories Atom Feed" href="https://jagmoreira.com/feeds/{slug}.atom.xml">
+    </head>
 
-	<body class="theme-base-0f">
+    <body class="theme-base-0f">
 <div class="sidebar">
-	<div class="container sidebar-sticky">
-		<div class="sidebar-about">
-			<h1>
-				<a href="/">
-						<img class="profile-picture" src="https://jagmoreira.com/images/avatar.jpg">
-					Joao Moreira
-				</a>
-			</h1>
-			<p>Data scientist. Iron Man fan.</p>
-		</div>
-		<nav class="sidebar-nav">
-				<a class="sidebar-nav-item" href="https://jagmoreira.com/pages/about.html">About</a>
-		</nav>
-		<nav class="sidebar-nav">
-					<script type="text/javascript" language="javascript">
-					<!--
-					// Email obfuscator script 2.1 by Tim Williams, University of Arizona
-					// Random encryption key feature coded by Andrew Moulden
-					// This code is freeware provided these four comment lines remain intact
-					// A wizard to generate this code is at http://www.jottings.com/obfuscator/
-					{ coded = "dZ8Z.8J.kZ3ME38@Jk8EF.LZk"
-					  key = "59bOciUfrngQj8xYMmzwFCAyhPBuGLEvt3sJodq1X7k6NpW4TSaIHeVKRl2D0Z"
-					  shift = coded.length
-					  link = ""
-					  for (i=0; i<coded.length; i++) {
-					    if (key.indexOf(coded.charAt(i))==-1) {
-					      ltr = coded.charAt(i)
-					      link += (ltr)
-					    }
-					    else {
-					      ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
-					      link += (key.charAt(ltr))
-					    }
-					  }
-					  emailLink = "<a class='sidebar-nav-icon' href='mailto:" + link + "'>"
-					  emailLink += "  <i class='fa fa-envelope fa-2x'></i>"
-					  emailLink += "</a>"
-					  document.write(emailLink)
-					}
-					//-->
-					</script>
-					<noscript>
-						<p class="sidebar-nav">Please enable javascript to email me.</p>
-					</noscript>
-					<a class="sidebar-nav-icon" target="_blank" href="https://github.com/jagmoreira">
-						<i class="fa fa-github-square fa-2x"></i>
-					</a>
-					<a class="sidebar-nav-icon" target="_blank" href="https://www.linkedin.com/in/joao-moreira">
-						<i class="fa fa-linkedin fa-2x"></i>
-					</a>
-				<a class="sidebar-nav-icon" rel="alternate" type="application/atom+xml" href="https://jagmoreira.com/feeds/all.atom.xml">
-					<i class="fa fa-feed fa-2x"></i>
-				</a>
-		</nav>
-	</div>
-</div>		<div class="content container">
-			<div class="post">
+    <div class="container sidebar-sticky">
+        <div class="sidebar-about">
+            <h1>
+                <a href="/">
+                        <img class="profile-picture" src="https://jagmoreira.com/images/avatar.jpg">
+                    Joao Moreira
+                </a>
+            </h1>
+            <p>Data scientist. Iron Man fan.</p>
+        </div>
+        <nav class="sidebar-nav">
+                <a class="sidebar-nav-item" href="https://jagmoreira.com/pages/about.html">About</a>
+        </nav>
+        <nav class="sidebar-nav">
+                    <script type="text/javascript" language="javascript">
+                    <!--
+                    // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+                    // Random encryption key feature coded by Andrew Moulden
+                    // This code is freeware provided these four comment lines remain intact
+                    // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+                    { coded = "dZ8Z.8J.kZ3ME38@Jk8EF.LZk"
+                      key = "59bOciUfrngQj8xYMmzwFCAyhPBuGLEvt3sJodq1X7k6NpW4TSaIHeVKRl2D0Z"
+                      shift = coded.length
+                      link = ""
+                      for (i=0; i<coded.length; i++) {
+                        if (key.indexOf(coded.charAt(i))==-1) {
+                          ltr = coded.charAt(i)
+                          link += (ltr)
+                        }
+                        else {
+                          ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+                          link += (key.charAt(ltr))
+                        }
+                      }
+                      emailLink = "<a class='sidebar-nav-icon' href='mailto:" + link + "'>"
+                      emailLink += "  <i class='fa fa-envelope fa-2x'></i>"
+                      emailLink += "</a>"
+                      document.write(emailLink)
+                    }
+                    //-->
+                    </script>
+                    <noscript>
+                        <p class="sidebar-nav">Please enable javascript to email me.</p>
+                    </noscript>
+                    <a class="sidebar-nav-icon" target="_blank" href="https://github.com/jagmoreira">
+                        <i class="fa fa-github-square fa-2x"></i>
+                    </a>
+                    <a class="sidebar-nav-icon" target="_blank" href="https://www.linkedin.com/in/joao-moreira">
+                        <i class="fa fa-linkedin fa-2x"></i>
+                    </a>
+                <a class="sidebar-nav-icon" rel="alternate" type="application/atom+xml" href="https://jagmoreira.com/feeds/all.atom.xml">
+                    <i class="fa fa-feed fa-2x"></i>
+                </a>
+        </nav>
+    </div>
+</div>        <div class="content container">
+            <div class="post">
     <h1 class="post-title">Updating the micro python version of virtual environments</h1>
     <span class="post-date">May 13, 2017</span>
     <p><strong>TL;DR</strong>: I wrote a <a href="https://gist.github.com/jagmoreira/b922d0524a5b7bc9500ea4b8c372e66b">gist</a> to systematically update the micro version of python for all virtual environments in your system using pyenv!</p>
@@ -94,13 +94,13 @@
 <p>I use pyenv (link) to manage all my version of python, so if I wanted to update the micro version of one of my 3.5.1 projects:</p>
 <div class="highlight"><pre><span></span>$ pyenv versions
   system
-  3.5.1
-  3.5.1/envs/proj
+  <span class="m">3</span>.5.1
+  <span class="m">3</span>.5.1/envs/proj
 </pre></div>
 
 
 <p>First I install the latest 3.5.x version:</p>
-<div class="highlight"><pre><span></span>$ pyenv install 3.5.3
+<div class="highlight"><pre><span></span>$ pyenv install <span class="m">3</span>.5.3
 <span class="o">(</span>...<span class="o">)</span>
 </pre></div>
 
@@ -115,7 +115,7 @@
 <p>Now I can safely remove the old 3.5.1 <code>proj</code>, and create a new <code>proj</code> based on 3.5.3:</p>
 <div class="highlight"><pre><span></span>$ pyenv uninstall proj
 <span class="o">(</span>...<span class="o">)</span>
-$ pyenv virtualenv 3.5.3 proj
+$ pyenv virtualenv <span class="m">3</span>.5.3 proj
 <span class="o">(</span>...<span class="o">)</span>
 </pre></div>
 
@@ -126,15 +126,15 @@ $ pyenv virtualenv 3.5.3 proj
 
 $ pyenv versions
   system
-  3.5.1
-  3.5.3
-  3.5.3/envs/proj
+  <span class="m">3</span>.5.1
+  <span class="m">3</span>.5.3
+  <span class="m">3</span>.5.3/envs/proj
 </pre></div>
 
 
 <p>And voilá.</p>
 <p>If you don't use the base 3.5.1 you can now safely uninstall it:</p>
-<div class="highlight"><pre><span></span>$ pyenv uninstall 3.5.1
+<div class="highlight"><pre><span></span>$ pyenv uninstall <span class="m">3</span>.5.1
 </pre></div>
 
 
@@ -143,21 +143,21 @@ $ pyenv versions
 <p>The first step is to find all main python versions currently installed:</p>
 <div class="highlight"><pre><span></span>$ pyenv versions
   system
-  2.7.10
-  2.7.10/envs/foo
-  2.7.10/envs/bar
-  2.7.12/envs/baz
-  3.5.3
-  3.5.3/envs/proj
+  <span class="m">2</span>.7.10
+  <span class="m">2</span>.7.10/envs/foo
+  <span class="m">2</span>.7.10/envs/bar
+  <span class="m">2</span>.7.12/envs/baz
+  <span class="m">3</span>.5.3
+  <span class="m">3</span>.5.3/envs/proj
   foo
   bar
   baz
   proj
 
   $ pyenv versions --bare <span class="p">|</span> grep / <span class="p">|</span> cut -f <span class="m">1</span> -d / <span class="p">|</span> uniq
-  2.7.10
-  2.7.12
-  3.5.3
+  <span class="m">2</span>.7.10
+  <span class="m">2</span>.7.12
+  <span class="m">3</span>.5.3
 </pre></div>
 
 
@@ -172,7 +172,7 @@ pyenv update
 
 <span class="k">for</span> VERSION in <span class="nv">$MAIN_PYTHONS</span><span class="p">;</span> <span class="k">do</span>
     <span class="c1"># Get the latest micro version for each A.B python</span>
-    <span class="nv">MAJOR_MINOR</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$VERSION</span> <span class="p">|</span> cut -f 1,2 -d .<span class="k">)</span><span class="s2">&quot;</span>
+    <span class="nv">MAJOR_MINOR</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$VERSION</span> <span class="p">|</span> cut -f <span class="m">1</span>,2 -d .<span class="k">)</span><span class="s2">&quot;</span>
     <span class="nv">LATEST_MICRO</span><span class="o">=</span><span class="k">$(</span>pyenv install -l <span class="p">|</span> grep -E <span class="s2">&quot;(^| )</span><span class="nv">$MAJOR_MINOR</span><span class="s2">&quot;</span> <span class="p">|</span> sort -b -V <span class="p">|</span> tail -n <span class="m">1</span> <span class="p">|</span> sed -e <span class="s1">&#39;s/^[ \t]*//&#39;</span><span class="k">)</span>
 
     <span class="c1"># If there are no new micro versions</span>
@@ -188,14 +188,14 @@ pyenv update
 
 $ ./update_envs_micro_python.sh
 <span class="o">(</span>...pyenv update...<span class="o">)</span>
-Checking <span class="k">for</span> micro version updates <span class="k">for</span> python 2.7.10.
-Found a new micro version <span class="k">for</span> python 2.7.10!
-2.7.10 -&gt; 2.7.13
-Checking <span class="k">for</span> micro version updates <span class="k">for</span> python 2.7.12.
-Found a new micro version <span class="k">for</span> python 2.7.12!
-2.7.12 -&gt; 2.7.13
-Checking <span class="k">for</span> micro version updates <span class="k">for</span> python 3.5.3.
-Version 3.5.3 is already the latest version in the 3.5.x series.
+Checking <span class="k">for</span> micro version updates <span class="k">for</span> python <span class="m">2</span>.7.10.
+Found a new micro version <span class="k">for</span> python <span class="m">2</span>.7.10!
+<span class="m">2</span>.7.10 -&gt; <span class="m">2</span>.7.13
+Checking <span class="k">for</span> micro version updates <span class="k">for</span> python <span class="m">2</span>.7.12.
+Found a new micro version <span class="k">for</span> python <span class="m">2</span>.7.12!
+<span class="m">2</span>.7.12 -&gt; <span class="m">2</span>.7.13
+Checking <span class="k">for</span> micro version updates <span class="k">for</span> python <span class="m">3</span>.5.3.
+Version <span class="m">3</span>.5.3 is already the latest version in the <span class="m">3</span>.5.x series.
 </pre></div>
 
 
@@ -262,7 +262,7 @@ pip install -r <span class="nv">$ENV_PIP_REQS</span>
 <h2>Putting it all together</h2>
 <p>I uploaded the full script, with some additional tweaks as a <a href="https://gist.github.com/jagmoreira/b922d0524a5b7bc9500ea4b8c372e66b">public gist</a>.</p>
 <p>Hope it's useful to someone else!</p>
-			</div>
-		</div>
-	</body>
+            </div>
+        </div>
+    </body>
 </html>

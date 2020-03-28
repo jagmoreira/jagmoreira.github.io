@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Joao Moreira</title><link href="https://jagmoreira.com/" rel="alternate"></link><link href="https://jagmoreira.com/feeds/all.atom.xml" rel="self"></link><id>https://jagmoreira.com/</id><updated>2017-06-23T00:00:00-05:00</updated><entry><title>I wrote a LaTeX CV template!</title><link href="https://jagmoreira.com/i-wrote-a-latex-cv-template.html" rel="alternate"></link><published>2017-06-23T00:00:00-05:00</published><updated>2017-06-23T00:00:00-05:00</updated><author><name>Joao Moreira</name></author><id>tag:jagmoreira.com,2017-06-23:/i-wrote-a-latex-cv-template.html</id><summary type="html">&lt;p&gt;Presenting the Friggen-Awesome LaTeX template for your CV or resumé.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I'm currently in the job market looking for a data science-related job. The first step (of many) in applying for a job is polishing up that resumé. It had been a while since I touched my resumé. I had a Word document that was 3-pages long describing in great detail all my &lt;em&gt;academic&lt;/em&gt; accomplishments. While I am of course proud of my publication record and all my conference participations, it was time to actually create a 1-page resumé highlighting my &lt;em&gt;professional&lt;/em&gt; experience and &lt;em&gt;skills&lt;/em&gt; instead.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Joao Moreira</title><link href="https://jagmoreira.com/" rel="alternate"></link><link href="https://jagmoreira.com/feeds/all.atom.xml" rel="self"></link><id>https://jagmoreira.com/</id><updated>2017-06-23T00:00:00-05:00</updated><subtitle>Data Scientist</subtitle><entry><title>I wrote a LaTeX CV template!</title><link href="https://jagmoreira.com/i-wrote-a-latex-cv-template.html" rel="alternate"></link><published>2017-06-23T00:00:00-05:00</published><updated>2017-06-23T00:00:00-05:00</updated><author><name>Joao Moreira</name></author><id>tag:jagmoreira.com,2017-06-23:/i-wrote-a-latex-cv-template.html</id><summary type="html">&lt;p&gt;Presenting the Friggen-Awesome LaTeX template for your CV or resumé.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I'm currently in the job market looking for a data science-related job. The first step (of many) in applying for a job is polishing up that resumé. It had been a while since I touched my resumé. I had a Word document that was 3-pages long describing in great detail all my &lt;em&gt;academic&lt;/em&gt; accomplishments. While I am of course proud of my publication record and all my conference participations, it was time to actually create a 1-page resumé highlighting my &lt;em&gt;professional&lt;/em&gt; experience and &lt;em&gt;skills&lt;/em&gt; instead.&lt;/p&gt;
 &lt;p&gt;I had been thinking for a while about creating a LaTeX CV/resumé, so this was the perfect opportunity to finally do it. I looked around for existing templates.  is a great website with tons of templates. It even has an online editor so you don't have to install LaTeX on you computer to write your CV.&lt;/p&gt;
 &lt;p&gt;The most appealing template I found was the &lt;a href="https://www.sharelatex.com/templates/cv-or-resume/fancy-cv"&gt;Fancy CV&lt;/a&gt;, also called by Friggeri CV, originally released by &lt;a href="https://github.com/afriggeri"&gt;Adrian Friggeri&lt;/a&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Original Fancy CV" src="https://jagmoreira.com/images/fanci_cv.png"&gt;&lt;/p&gt;
@@ -15,7 +15,7 @@
 &lt;p&gt;It was great fun creating this template. While I didn't create it from scratch, I learned a lot about LaTeX internals. Just like with any programming language, you can do a lot with LaTeX variables and conditionals. Yes there are if-statements in LaTex!&lt;/p&gt;
 &lt;p&gt;I hope this template will be of great use to others, specially those currently looking for jobs. If you find something broken, have a criticism or some suggestion for improvement, please do submit an &lt;a href="https://github.com/jagmoreira/Friggen-Awesome-CV/issues"&gt;issue&lt;/a&gt; or &lt;a href="https://github.com/jagmoreira/Friggen-Awesome-CV/pulls"&gt;pull request&lt;/a&gt; on GitHub.&lt;/p&gt;
 &lt;p&gt;Also, if you are reading this blog and want to learn more about me, here's my own friggen' awesome &lt;a href="https://jagmoreira.com/pdfs/resume.pdf"&gt;resumé&lt;/a&gt;. :-)&lt;/p&gt;
-&lt;p&gt;Many thanks to &lt;a href="https://github.com/Nadorrano"&gt;Nadorrano&lt;/a&gt; and &lt;a href="https://github.com/posquit0"&gt;posquit0&lt;/a&gt;, the creators of &lt;a href="https://github.com/Nadorrano/cv-friggeri-x"&gt;CV-Friggeri-X&lt;/a&gt; and &lt;a href="https://github.com/posquit0/Awesome-CV"&gt;Awesome-CV&lt;/a&gt;, respectively, and also to &lt;a href="https://github.com/afriggeri"&gt;Adrian Friggeri&lt;/a&gt; for creating the original &lt;a href="https://www.sharelatex.com/templates/cv-or-resume/fancy-cv"&gt;Fancy CV&lt;/a&gt;.&lt;/p&gt;</content><category term="latex"></category><category term="resume"></category></entry><entry><title>Updating the micro python version of virtual environments</title><link href="https://jagmoreira.com/updating-the-micro-python-version-of-virtual-environments.html" rel="alternate"></link><published>2017-05-13T00:00:00-05:00</published><updated>2017-05-13T00:00:00-05:00</updated><author><name>Joao Moreira</name></author><id>tag:jagmoreira.com,2017-05-13:/updating-the-micro-python-version-of-virtual-environments.html</id><summary type="html">&lt;p&gt;How to systematically update the micro version of python for all virtual environments in your system using pyenv.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;: I wrote a &lt;a href="https://gist.github.com/jagmoreira/b922d0524a5b7bc9500ea4b8c372e66b"&gt;gist&lt;/a&gt; to systematically update the micro version of python for all virtual environments in your system using pyenv!&lt;/p&gt;
+&lt;p&gt;Many thanks to &lt;a href="https://github.com/Nadorrano"&gt;Nadorrano&lt;/a&gt; and &lt;a href="https://github.com/posquit0"&gt;posquit0&lt;/a&gt;, the creators of &lt;a href="https://github.com/Nadorrano/cv-friggeri-x"&gt;CV-Friggeri-X&lt;/a&gt; and &lt;a href="https://github.com/posquit0/Awesome-CV"&gt;Awesome-CV&lt;/a&gt;, respectively, and also to &lt;a href="https://github.com/afriggeri"&gt;Adrian Friggeri&lt;/a&gt; for creating the original &lt;a href="https://www.sharelatex.com/templates/cv-or-resume/fancy-cv"&gt;Fancy CV&lt;/a&gt;.&lt;/p&gt;</content><category term="Development"></category><category term="latex"></category><category term="resume"></category></entry><entry><title>Updating the micro python version of virtual environments</title><link href="https://jagmoreira.com/updating-the-micro-python-version-of-virtual-environments.html" rel="alternate"></link><published>2017-05-13T00:00:00-05:00</published><updated>2017-05-13T00:00:00-05:00</updated><author><name>Joao Moreira</name></author><id>tag:jagmoreira.com,2017-05-13:/updating-the-micro-python-version-of-virtual-environments.html</id><summary type="html">&lt;p&gt;How to systematically update the micro version of python for all virtual environments in your system using pyenv.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;: I wrote a &lt;a href="https://gist.github.com/jagmoreira/b922d0524a5b7bc9500ea4b8c372e66b"&gt;gist&lt;/a&gt; to systematically update the micro version of python for all virtual environments in your system using pyenv!&lt;/p&gt;
 &lt;p&gt;Python projects should be implemented inside virtual environments (virtualenvs). If you are not doing it yet, then please start. Right now! Virtualenvs are essential to ensure reproducibility and to keep different projects sand-boxed from each other. You specify a &lt;code&gt;requirements.pip&lt;/code&gt; file and a python &lt;strong&gt;A.B&lt;/strong&gt; (major and minor) version and anyone else, including future you, should be able to re-create your project results.&lt;/p&gt;
 &lt;p&gt;Yet, there is some flexibility in virtualenvs &lt;em&gt;because of the micro version&lt;/em&gt;. Python releases follow a A.B.C versioning system, where &lt;strong&gt;C&lt;/strong&gt; represents a micro update to a given &lt;strong&gt;A.B&lt;/strong&gt; version. These micro updates are reserved for security and bug fixes. As I write this post, the latest &lt;a href="https://docs.python.org/devguide/index.html#status-of-python-branches"&gt;active&lt;/a&gt; releases from python's &lt;a href="https://www.python.org/downloads/"&gt;official page&lt;/a&gt; are 3.6.1, 3.5.3, and 2.7.13.&lt;/p&gt;
 &lt;p&gt;Since virtualenvs are typically only tied to a &lt;strong&gt;A.B&lt;/strong&gt; version, we can improve the security and stability of a project by updating the virtualenv's micro version of python without affecting anything project results.&lt;/p&gt;
@@ -23,13 +23,13 @@
 &lt;p&gt;I use pyenv (link) to manage all my version of python, so if I wanted to update the micro version of one of my 3.5.1 projects:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pyenv versions
   system
-  3.5.1
-  3.5.1/envs/proj
+  &lt;span class="m"&gt;3&lt;/span&gt;.5.1
+  &lt;span class="m"&gt;3&lt;/span&gt;.5.1/envs/proj
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;First I install the latest 3.5.x version:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pyenv install 3.5.3
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pyenv install &lt;span class="m"&gt;3&lt;/span&gt;.5.3
 &lt;span class="o"&gt;(&lt;/span&gt;...&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -44,7 +44,7 @@
 &lt;p&gt;Now I can safely remove the old 3.5.1 &lt;code&gt;proj&lt;/code&gt;, and create a new &lt;code&gt;proj&lt;/code&gt; based on 3.5.3:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pyenv uninstall proj
 &lt;span class="o"&gt;(&lt;/span&gt;...&lt;span class="o"&gt;)&lt;/span&gt;
-$ pyenv virtualenv 3.5.3 proj
+$ pyenv virtualenv &lt;span class="m"&gt;3&lt;/span&gt;.5.3 proj
 &lt;span class="o"&gt;(&lt;/span&gt;...&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -55,15 +55,15 @@ $ pyenv virtualenv 3.5.3 proj
 
 $ pyenv versions
   system
-  3.5.1
-  3.5.3
-  3.5.3/envs/proj
+  &lt;span class="m"&gt;3&lt;/span&gt;.5.1
+  &lt;span class="m"&gt;3&lt;/span&gt;.5.3
+  &lt;span class="m"&gt;3&lt;/span&gt;.5.3/envs/proj
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;And voilá.&lt;/p&gt;
 &lt;p&gt;If you don't use the base 3.5.1 you can now safely uninstall it:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pyenv uninstall 3.5.1
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pyenv uninstall &lt;span class="m"&gt;3&lt;/span&gt;.5.1
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -72,21 +72,21 @@ $ pyenv versions
 &lt;p&gt;The first step is to find all main python versions currently installed:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pyenv versions
   system
-  2.7.10
-  2.7.10/envs/foo
-  2.7.10/envs/bar
-  2.7.12/envs/baz
-  3.5.3
-  3.5.3/envs/proj
+  &lt;span class="m"&gt;2&lt;/span&gt;.7.10
+  &lt;span class="m"&gt;2&lt;/span&gt;.7.10/envs/foo
+  &lt;span class="m"&gt;2&lt;/span&gt;.7.10/envs/bar
+  &lt;span class="m"&gt;2&lt;/span&gt;.7.12/envs/baz
+  &lt;span class="m"&gt;3&lt;/span&gt;.5.3
+  &lt;span class="m"&gt;3&lt;/span&gt;.5.3/envs/proj
   foo
   bar
   baz
   proj
 
   $ pyenv versions --bare &lt;span class="p"&gt;|&lt;/span&gt; grep / &lt;span class="p"&gt;|&lt;/span&gt; cut -f &lt;span class="m"&gt;1&lt;/span&gt; -d / &lt;span class="p"&gt;|&lt;/span&gt; uniq
-  2.7.10
-  2.7.12
-  3.5.3
+  &lt;span class="m"&gt;2&lt;/span&gt;.7.10
+  &lt;span class="m"&gt;2&lt;/span&gt;.7.12
+  &lt;span class="m"&gt;3&lt;/span&gt;.5.3
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -101,7 +101,7 @@ pyenv update
 
 &lt;span class="k"&gt;for&lt;/span&gt; VERSION in &lt;span class="nv"&gt;$MAIN_PYTHONS&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
     &lt;span class="c1"&gt;# Get the latest micro version for each A.B python&lt;/span&gt;
-    &lt;span class="nv"&gt;MAJOR_MINOR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$VERSION&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; cut -f 1,2 -d .&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class="nv"&gt;MAJOR_MINOR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$VERSION&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; cut -f &lt;span class="m"&gt;1&lt;/span&gt;,2 -d .&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
     &lt;span class="nv"&gt;LATEST_MICRO&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;pyenv install -l &lt;span class="p"&gt;|&lt;/span&gt; grep -E &lt;span class="s2"&gt;&amp;quot;(^| )&lt;/span&gt;&lt;span class="nv"&gt;$MAJOR_MINOR&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; sort -b -V &lt;span class="p"&gt;|&lt;/span&gt; tail -n &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; sed -e &lt;span class="s1"&gt;&amp;#39;s/^[ \t]*//&amp;#39;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
 
     &lt;span class="c1"&gt;# If there are no new micro versions&lt;/span&gt;
@@ -117,14 +117,14 @@ pyenv update
 
 $ ./update_envs_micro_python.sh
 &lt;span class="o"&gt;(&lt;/span&gt;...pyenv update...&lt;span class="o"&gt;)&lt;/span&gt;
-Checking &lt;span class="k"&gt;for&lt;/span&gt; micro version updates &lt;span class="k"&gt;for&lt;/span&gt; python 2.7.10.
-Found a new micro version &lt;span class="k"&gt;for&lt;/span&gt; python 2.7.10!
-2.7.10 -&amp;gt; 2.7.13
-Checking &lt;span class="k"&gt;for&lt;/span&gt; micro version updates &lt;span class="k"&gt;for&lt;/span&gt; python 2.7.12.
-Found a new micro version &lt;span class="k"&gt;for&lt;/span&gt; python 2.7.12!
-2.7.12 -&amp;gt; 2.7.13
-Checking &lt;span class="k"&gt;for&lt;/span&gt; micro version updates &lt;span class="k"&gt;for&lt;/span&gt; python 3.5.3.
-Version 3.5.3 is already the latest version in the 3.5.x series.
+Checking &lt;span class="k"&gt;for&lt;/span&gt; micro version updates &lt;span class="k"&gt;for&lt;/span&gt; python &lt;span class="m"&gt;2&lt;/span&gt;.7.10.
+Found a new micro version &lt;span class="k"&gt;for&lt;/span&gt; python &lt;span class="m"&gt;2&lt;/span&gt;.7.10!
+&lt;span class="m"&gt;2&lt;/span&gt;.7.10 -&amp;gt; &lt;span class="m"&gt;2&lt;/span&gt;.7.13
+Checking &lt;span class="k"&gt;for&lt;/span&gt; micro version updates &lt;span class="k"&gt;for&lt;/span&gt; python &lt;span class="m"&gt;2&lt;/span&gt;.7.12.
+Found a new micro version &lt;span class="k"&gt;for&lt;/span&gt; python &lt;span class="m"&gt;2&lt;/span&gt;.7.12!
+&lt;span class="m"&gt;2&lt;/span&gt;.7.12 -&amp;gt; &lt;span class="m"&gt;2&lt;/span&gt;.7.13
+Checking &lt;span class="k"&gt;for&lt;/span&gt; micro version updates &lt;span class="k"&gt;for&lt;/span&gt; python &lt;span class="m"&gt;3&lt;/span&gt;.5.3.
+Version &lt;span class="m"&gt;3&lt;/span&gt;.5.3 is already the latest version in the &lt;span class="m"&gt;3&lt;/span&gt;.5.x series.
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -190,7 +190,7 @@ pip install -r &lt;span class="nv"&gt;$ENV_PIP_REQS&lt;/span&gt;
 &lt;p&gt;The reason statsmodels is done differently is because it has several requirements (numpy, scipy, pandas, patsy) that can all be installed in one go via requirements file, if numpy is already installed. There are probably other packages out there that suffer from the same issues. Adapt as necessary to your purposes.&lt;/p&gt;
 &lt;h2&gt;Putting it all together&lt;/h2&gt;
 &lt;p&gt;I uploaded the full script, with some additional tweaks as a &lt;a href="https://gist.github.com/jagmoreira/b922d0524a5b7bc9500ea4b8c372e66b"&gt;public gist&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Hope it's useful to someone else!&lt;/p&gt;</content><category term="python"></category><category term="bash"></category><category term="pyenv"></category></entry><entry><title>Setting up a new development environment</title><link href="https://jagmoreira.com/setting-up-a-new-development-environment.html" rel="alternate"></link><published>2017-01-03T00:00:00-06:00</published><updated>2017-01-03T00:00:00-06:00</updated><author><name>Joao Moreira</name></author><id>tag:jagmoreira.com,2017-01-03:/setting-up-a-new-development-environment.html</id><summary type="html">&lt;p&gt;Learn how to set up your own personalized development environment on a new machine.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: This is an updated version of a &lt;a href="https://amaral.northwestern.edu/resources/guides/setting-new-development-environment"&gt;guide I wrote for the Amaral Lab&lt;/a&gt;. Since writing the original version, I updated Sublime Text to version 3, changed how version control software is configured, and added Homebrew configuration.&lt;/p&gt;
+&lt;p&gt;Hope it's useful to someone else!&lt;/p&gt;</content><category term="Development"></category><category term="python"></category><category term="bash"></category><category term="pyenv"></category></entry><entry><title>Setting up a new development environment</title><link href="https://jagmoreira.com/setting-up-a-new-development-environment.html" rel="alternate"></link><published>2017-01-03T00:00:00-06:00</published><updated>2017-01-03T00:00:00-06:00</updated><author><name>Joao Moreira</name></author><id>tag:jagmoreira.com,2017-01-03:/setting-up-a-new-development-environment.html</id><summary type="html">&lt;p&gt;Learn how to set up your own personalized development environment on a new machine.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: This is an updated version of a &lt;a href="https://amaral.northwestern.edu/resources/guides/setting-new-development-environment"&gt;guide I wrote for the Amaral Lab&lt;/a&gt;. Since writing the original version, I updated Sublime Text to version 3, changed how version control software is configured, and added Homebrew configuration.&lt;/p&gt;
 &lt;p&gt;Setting up your development environment on a new computer can be a pain. You start by installing your favorite editor (sublime, vim, emacs, spacemacs, etc.). After that you need to install all your essential packages and plugins (the ones that make you go &lt;em&gt;"How can your live without XX? This is impossible to work."&lt;/em&gt; every time a colleague asks you to check out something on their computer). Then, if you work with a scripting language like python or ruby, you also need to download an interpreter and configure it for your projects. In my work I use pyenv which makes this part super easy. Finally you go into the little details and configure the look and feel of the operating system (shell prompt, aliases, handy functions etc), and also set up all the environment variables that connect all the part... Like I said, setting up a dev environment on a new computer can be a pain.&lt;/p&gt;
 &lt;p&gt;Fortunately a lot of programmers have had this problem before, and since most of them hate having to do the same task more than once, they came up with ways to automate this painful and tedious process.&lt;/p&gt;
 &lt;p&gt;Nowadays a simple google search will give you access to plenty of scripts for setting up a new dev environment on your system of choice. However during my searches I couldn't find a script that I really liked. They either didn't automate enough parts or automated way more parts than I used. So I decided to write my own custom script, and instead of just sharing it and have it be useful for no one besides myself, I thought I would instead explain how you can make your own setup script.&lt;/p&gt;
@@ -213,7 +213,7 @@ Most Unix systems run a non-login shell which, by default, reads first the &lt;c
 
 &lt;p&gt;Then modify your &lt;code&gt;PATH&lt;/code&gt; like so:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Only modify path if both Homebrew and coreutils are installed&lt;/span&gt;
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt; brew &amp;gt; /dev/null 2&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -d &lt;span class="k"&gt;$(&lt;/span&gt;brew --prefix coreutils&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt; brew &amp;gt; /dev/null &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -d &lt;span class="k"&gt;$(&lt;/span&gt;brew --prefix coreutils&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
     &lt;span class="c1"&gt;# Add brew-installed GNU core utilities bin&lt;/span&gt;
     &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;brew --prefix coreutils&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;/libexec/gnubin:&lt;/span&gt;&lt;span class="nv"&gt;$PATH&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
     &lt;span class="c1"&gt;# Add man pages for brew-installed GNU core utilities&lt;/span&gt;
@@ -224,11 +224,11 @@ Most Unix systems run a non-login shell which, by default, reads first the &lt;c
 
 &lt;p&gt;This ensures the GNU versions of those commands are the ones loaded in the shell. If you want to keep your configuration general, you need to add some checks in &lt;code&gt;.bashrc&lt;/code&gt; to make sure your aliases work as expected in both systems. Here's how you can configure your &lt;code&gt;bash_profile&lt;/code&gt; to make &lt;code&gt;ls&lt;/code&gt; have colors in both macOS and other Unixes:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Detect which `ls` flavor is in use&lt;/span&gt;
-&lt;span class="k"&gt;if&lt;/span&gt; ls --color &amp;gt;/dev/null 2&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;1&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="c1"&gt;# GNU `ls`&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; ls --color &amp;gt;/dev/null &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="c1"&gt;# GNU `ls`&lt;/span&gt;
     &lt;span class="nv"&gt;COLORFLAG&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;--color&amp;#39;&lt;/span&gt;
     &lt;span class="nv"&gt;GROUPDIRS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;--group-directories-first&amp;#39;&lt;/span&gt;
     &lt;span class="c1"&gt;# GNU ls has much finer resolution so it&amp;#39;s better to put it in its own file&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt; dircolors &amp;gt;/dev/null 2&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;1&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt; dircolors &amp;gt;/dev/null &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
         &lt;span class="o"&gt;[&lt;/span&gt; -r ~/.dir_colors &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;eval&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;dircolors -b ~/.dir_colors&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
     &lt;span class="k"&gt;fi&lt;/span&gt;
 &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="c1"&gt;# OS X `ls`&lt;/span&gt;
@@ -423,7 +423,7 @@ $ brew bundle
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;uname&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Darwin&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
 
     &lt;span class="c1"&gt;# Install homebrew if it does not yet exist&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; ! &lt;span class="nb"&gt;type&lt;/span&gt; brew &amp;gt;/dev/null 2&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;1&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; ! &lt;span class="nb"&gt;type&lt;/span&gt; brew &amp;gt;/dev/null &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
         /usr/bin/ruby -e &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
     &lt;span class="k"&gt;fi&lt;/span&gt;
 
@@ -530,7 +530,7 @@ backup_sublime&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/
 &lt;li&gt;&lt;a href="https://github.com/necolas/dotfiles"&gt;https://github.com/necolas/dotfiles&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/miohtama/sublime-helper"&gt;https://github.com/miohtama/sublime-helper&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Their authors deserve most of the credit for this guide!&lt;/p&gt;</content><category term="dotfiles"></category><category term="bash"></category></entry><entry><title>R v Python: Dawn of Analytics</title><link href="https://jagmoreira.com/r-v-python-dawn-of-analytics.html" rel="alternate"></link><published>2016-07-07T00:00:00-05:00</published><updated>2016-07-07T00:00:00-05:00</updated><author><name>Joao Moreira</name></author><id>tag:jagmoreira.com,2016-07-07:/r-v-python-dawn-of-analytics.html</id><summary type="html">&lt;p&gt;A fresh yet slightly biased perspective on the recent data science language war.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I've just completed a 3-month internship at a startup that does data consulting for chemical engineering companies. It was a great experience overall and I learned a lot, including how to program in R. You see, the Amaral Lab (where I'm currently doing a PhD) is almost exclusively a Python lab. Every now and then other languages attempt to break in but they never get very far (looking at you Matlab). So, among other reasons, I saw this internship as a good opportunity to learn R since it is one of the main programming languages used in the Data Science world in addition to Python.&lt;/p&gt;
+&lt;p&gt;Their authors deserve most of the credit for this guide!&lt;/p&gt;</content><category term="Development"></category><category term="dotfiles"></category><category term="bash"></category></entry><entry><title>R v Python: Dawn of Analytics</title><link href="https://jagmoreira.com/r-v-python-dawn-of-analytics.html" rel="alternate"></link><published>2016-07-07T00:00:00-05:00</published><updated>2016-07-07T00:00:00-05:00</updated><author><name>Joao Moreira</name></author><id>tag:jagmoreira.com,2016-07-07:/r-v-python-dawn-of-analytics.html</id><summary type="html">&lt;p&gt;A fresh yet slightly biased perspective on the recent data science language war.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I've just completed a 3-month internship at a startup that does data consulting for chemical engineering companies. It was a great experience overall and I learned a lot, including how to program in R. You see, the Amaral Lab (where I'm currently doing a PhD) is almost exclusively a Python lab. Every now and then other languages attempt to break in but they never get very far (looking at you Matlab). So, among other reasons, I saw this internship as a good opportunity to learn R since it is one of the main programming languages used in the Data Science world in addition to Python.&lt;/p&gt;
 &lt;p&gt;A simple google search will yield &lt;a href="https://www.google.com/search?q=R+vs+python"&gt;tons of R vs. Python comparisons&lt;/a&gt; and people can be very entrenched in either camp. Regardless, not having read such a comparison (true!) before starting my internship I thought I would try to share my fresh yet slightly biased perspective on this data science language war by focusing on a few key points.&lt;/p&gt;
 &lt;p&gt;Python is a general-purpose programming language created by Guido van Rossum in 1991. It's a high-level programming language built with a focus on readability and simplicity of syntax. Despite this (or because of this) it is an extremely popular language used in many applications, with an extensive &lt;a href="https://pypi.python.org/pypi"&gt;library&lt;/a&gt; of third-party packages. R is a programming language created by Ross Ihaka and Robert Gentleman in 1993. Unlike Python, R was developed mainly for use in statistical analysis. Because of its specificity, R is faster than Python in some computations. Just like Python, R also has a very large &lt;a href="https://cloud.r-project.org"&gt;repository&lt;/a&gt; of packages.&lt;/p&gt;
 &lt;p&gt;In terms of syntax, both languages have dynamic typing (no need to specify the type of a variable before assigning a value to it), support loops and conditionals, and use logic and math symbols in mostly the same ways. Python is famous for its use of indentation to delimit blocks of code while R is more "classic" in that it requires curly braces for any block of code longer than a single line.&lt;/p&gt;
@@ -540,7 +540,7 @@ backup_sublime&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/
 &lt;p&gt;Ultimately, most data scientists seek to share their work online. This entails creating a web-app to showcase data and/or visualization while hosting it in a server somewhere. Python users typically turn to &lt;a href="https://www.djangoproject.com"&gt;Django&lt;/a&gt; or &lt;a href="http://flask.pocoo.org"&gt;Flask&lt;/a&gt; for the app creation. This process can be quite cumbersome as, much like Python itself, these frameworks are general purpose: Flask is just a bare-bones package for web apps while the more powerful Django has a &lt;a href="https://docs.djangoproject.com/en/1.9/intro/"&gt;7-part tutorial&lt;/a&gt; on how to make a simple poll!
 The process is much easier with R. Using &lt;a href="http://shiny.rstudio.com"&gt;Shiny&lt;/a&gt;, a R-based web framework, you can have an interactive web app with plots up and running locally in just a few minutes.&lt;/p&gt;
 &lt;p&gt;If you're starting to learn how to program in Python you may be using the excellent &lt;a href="http://jupyter.org"&gt;Jupyter Notebook&lt;/a&gt;. This browser-based programming tool is great for quick coding and data visualization. The &lt;a href="https://irkernel.github.io"&gt;R kernel&lt;/a&gt; for Jupyter is relatively new so there are still some kinks, but the tool is in active development so expect improvements soon. Still, R in Jupyter already allows for much of the same testing/visualization available via the python kernel. A solid, and much more powerful, alternative for R programming is &lt;a href="https://www.rstudio.com"&gt;RStudio&lt;/a&gt; (Shiny was built by the RStudio people). It's a fully featured IDE that is very easy to set up.&lt;/p&gt;
-&lt;p&gt;So, where do I stand on this great war? ... Well, nowhere really. As is often the case, the truth lies somewhere in the middle. As I outlined above, Python and R have different strengths and are by no means mutually exclusive. Why choose a single language for all things when you can mix the best of both worlds?&lt;/p&gt;</content><category term="python"></category><category term="R"></category></entry><entry><title>Dataclysm: The very best of</title><link href="https://jagmoreira.com/dataclysm-the-very-best-of.html" rel="alternate"></link><published>2015-02-25T00:00:00-06:00</published><updated>2015-02-25T00:00:00-06:00</updated><author><name>Joao Moreira</name></author><id>tag:jagmoreira.com,2015-02-25:/dataclysm-the-very-best-of.html</id><summary type="html">&lt;p&gt;I recently read Dataclysm by Christian Rudder. These are some of my favorite stories from this book.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I recently read &lt;a href="http://dataclysm.org"&gt;Dataclysm&lt;/a&gt; by &lt;a href="https://twitter.com/christianrudder"&gt;Christian Rudder&lt;/a&gt;. If you don't know him, Christian Rudder is one of the founders of &lt;a href="https://www.okcupid.com"&gt;OkCupid&lt;/a&gt;, a very popular online dating website.&lt;/p&gt;
+&lt;p&gt;So, where do I stand on this great war? ... Well, nowhere really. As is often the case, the truth lies somewhere in the middle. As I outlined above, Python and R have different strengths and are by no means mutually exclusive. Why choose a single language for all things when you can mix the best of both worlds?&lt;/p&gt;</content><category term="Data Science"></category><category term="python"></category><category term="R"></category></entry><entry><title>Dataclysm: The very best of</title><link href="https://jagmoreira.com/dataclysm-the-very-best-of.html" rel="alternate"></link><published>2015-02-25T00:00:00-06:00</published><updated>2015-02-25T00:00:00-06:00</updated><author><name>Joao Moreira</name></author><id>tag:jagmoreira.com,2015-02-25:/dataclysm-the-very-best-of.html</id><summary type="html">&lt;p&gt;I recently read Dataclysm by Christian Rudder. These are some of my favorite stories from this book.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I recently read &lt;a href="http://dataclysm.org"&gt;Dataclysm&lt;/a&gt; by &lt;a href="https://twitter.com/christianrudder"&gt;Christian Rudder&lt;/a&gt;. If you don't know him, Christian Rudder is one of the founders of &lt;a href="https://www.okcupid.com"&gt;OkCupid&lt;/a&gt;, a very popular online dating website.&lt;/p&gt;
 &lt;p&gt;In OKCupid, as in other dating websites, users create a profile, put up some pictures, and write some stuff about themselves. They can then rate other users and send them private messages with the purpose of getting a date and, if they are lucky, find that special someone. When you're creating your profile and from time to time, the website also asks you several questions, some of their answers will be kept private, others will be put up on their profile pages.&lt;/p&gt;
 &lt;p&gt;OKCupid website has a companion blog, &lt;a href="http://blog.okcupid.com"&gt;OkTrends&lt;/a&gt;, where its creators (the DataCupids!) discuss and analyze trends and stereotypes, debunk myths, give advice, and much more, all using data from OKCupid. Dataclysm takes some of the most popular stories from this blog, expands them, and adds in a few more external datasets (Twitter, Facebook, Reddit, just to name a few) for extra punch.&lt;/p&gt;
 &lt;p&gt;Dataclysm is essentially about making sense of Big Data. It's about how, faced with a deluge (cataclysm) of data, we can use good data analysis to draw great insights. More generally the book presents an uplifting message that many insights that would otherwise have required years of work, expensive setups, and many test subjects, are now possible with careful analysis of existing datasets. Instead of doing an intensive review of the book, which is but a simple google search away, I will instead highlight some of my favorite stories from the book.&lt;/p&gt;
@@ -557,7 +557,7 @@ The process is much easier with R. Using &lt;a href="http://shiny.rstudio.com"&g
 &lt;h3&gt;Love is blind.&lt;/h3&gt;
 &lt;p&gt;A couple of years ago, to conclusively prove that love is blind, OKCupid removed all profiles photos from the website for a few hours. Well, not really. It was actually to promote a mobile app called &lt;a href="http://en.wikipedia.org/wiki/Crazy_Blind_Date"&gt;Crazy Blind Date&lt;/a&gt;. During that day, the number of messages exchanged on the website abruptly dropped to almost zero! While the app itself lasted only a few months, it still managed to serve blind dates to about 10,000 people. How did they feel about those blind dates? &lt;a href="http://blog.okcupid.com/index.php/we-experiment-on-human-beings/"&gt;&lt;em&gt;They loved them&lt;/em&gt;!&lt;/a&gt; Users, both male and female, reported having a great time, regardless of the other person's attractiveness. Maybe there is some truth to this myth after all.&lt;/p&gt;
 &lt;h3&gt;There are no borders anymore.&lt;/h3&gt;
-&lt;p&gt;This one isn't really a story but a whole chapter providing evidence to something that is becoming more and more evident and that yet many world leaders still refuse to accept for whatever reason: Physical borders not cultural borders. The internet has totally redefined how we can chart cultural similarity. A few years ago &lt;a href="http://petewarden.com/about/"&gt;Pete Warden&lt;/a&gt; scrapped Facebook data and calculated the clusters from the USA user connections. He &lt;a href="http://petewarden.com/2010/02/06/how-to-split-up-the-us/"&gt;found&lt;/a&gt; that people belonged to one of 7 "states" instead of the physical 50. In a maybe-not-so-different context, the datacupids found a totally different set of borders. Reddit, the front page of the internet, is organized into thousand of themed "subreddits". Looking at the most popular ones, and the frequency of posts across the different subreddits, the datacupids &lt;a href="http://www.slate.com/articles/technology/technology/2014/10/mapmaking_using_reddit_okcupid_twitter_and_other_social_media_websites.html"&gt;found&lt;/a&gt; a thriving "country" whose "state" borders are defined by common interests and location defined by similarity of interests.&lt;/p&gt;</content><category term="data science"></category><category term="review"></category></entry><entry><title>Pyenv Tutorial</title><link href="https://jagmoreira.com/pyenv-tutorial.html" rel="alternate"></link><published>2014-07-07T00:00:00-05:00</published><updated>2014-07-07T00:00:00-05:00</updated><author><name>Joao Moreira</name></author><id>tag:jagmoreira.com,2014-07-07:/pyenv-tutorial.html</id><summary type="html">&lt;p&gt;Meet pyenv: a simple Python version management tool.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Meet &lt;a href="https://github.com/yyuu/pyenv"&gt;pyenv&lt;/a&gt;: a simple Python version management tool. Previously known as Pythonbrew, pyenv lets you change the global Python version, install multiple Python versions, set directory (project)-specific Python versions, and yes create/manage virtual python environments ("virtualenv's"). All this is done on *NIX-style machines (Linux and OS X) without depending on Python itself and it works at the user-level–no need for any &lt;code&gt;sudo&lt;/code&gt; commands. So let's start!&lt;/p&gt;
+&lt;p&gt;This one isn't really a story but a whole chapter providing evidence to something that is becoming more and more evident and that yet many world leaders still refuse to accept for whatever reason: Physical borders not cultural borders. The internet has totally redefined how we can chart cultural similarity. A few years ago &lt;a href="http://petewarden.com/about/"&gt;Pete Warden&lt;/a&gt; scrapped Facebook data and calculated the clusters from the USA user connections. He &lt;a href="http://petewarden.com/2010/02/06/how-to-split-up-the-us/"&gt;found&lt;/a&gt; that people belonged to one of 7 "states" instead of the physical 50. In a maybe-not-so-different context, the datacupids found a totally different set of borders. Reddit, the front page of the internet, is organized into thousand of themed "subreddits". Looking at the most popular ones, and the frequency of posts across the different subreddits, the datacupids &lt;a href="http://www.slate.com/articles/technology/technology/2014/10/mapmaking_using_reddit_okcupid_twitter_and_other_social_media_websites.html"&gt;found&lt;/a&gt; a thriving "country" whose "state" borders are defined by common interests and location defined by similarity of interests.&lt;/p&gt;</content><category term="Data Science"></category><category term="data science"></category><category term="review"></category></entry><entry><title>Pyenv Tutorial</title><link href="https://jagmoreira.com/pyenv-tutorial.html" rel="alternate"></link><published>2014-07-07T00:00:00-05:00</published><updated>2014-07-07T00:00:00-05:00</updated><author><name>Joao Moreira</name></author><id>tag:jagmoreira.com,2014-07-07:/pyenv-tutorial.html</id><summary type="html">&lt;p&gt;Meet pyenv: a simple Python version management tool.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Meet &lt;a href="https://github.com/yyuu/pyenv"&gt;pyenv&lt;/a&gt;: a simple Python version management tool. Previously known as Pythonbrew, pyenv lets you change the global Python version, install multiple Python versions, set directory (project)-specific Python versions, and yes create/manage virtual python environments ("virtualenv's"). All this is done on *NIX-style machines (Linux and OS X) without depending on Python itself and it works at the user-level–no need for any &lt;code&gt;sudo&lt;/code&gt; commands. So let's start!&lt;/p&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
 &lt;p&gt;Follow the &lt;a href="https://github.com/yyuu/pyenv#installation"&gt;installation instructions&lt;/a&gt; or use the &lt;a href="https://github.com/yyuu/pyenv-installer"&gt;automatic installer&lt;/a&gt;. If you're using a Mac, I highly recommend installing pyenv with &lt;a href="https://github.com/yyuu/pyenv#homebrew-on-mac-os-x"&gt;Homebrew&lt;/a&gt; (none of that MacPorts shenanigans). Whichever way you decide to go, after checking out the repository, be sure to add a couple of lines to your &lt;code&gt;.bashrc&lt;/code&gt; (&lt;code&gt;.bash_profile&lt;/code&gt; on Mac) to enable pyenv's auto-complete functionality.&lt;/p&gt;
 &lt;h3&gt;Linux/OS X Copy-Paste Install&lt;/h3&gt;
@@ -572,51 +572,51 @@ The process is much easier with R. Using &lt;a href="http://shiny.rstudio.com"&g
 
 &lt;h3&gt;pyenv Suite Installer&lt;/h3&gt;
 &lt;p&gt;This is the one-liner provided by the &lt;a href="https://github.com/yyuu/pyenv-installer"&gt;automatic installer&lt;/a&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2&gt;Walkthrough&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;~$ pyenv global
-system
-~$ pyenv versions
-* system (set by /home/staff/jmoreira/.pyenv/version)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;~$ pyenv global&lt;/span&gt;
+&lt;span class="err"&gt;system&lt;/span&gt;
+&lt;span class="err"&gt;~$ pyenv versions&lt;/span&gt;
+&lt;span class="err"&gt;* system (set by /home/staff/jmoreira/.pyenv/version)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Usually you will only have one version of python installed, the system-wide version. That's what's shown in the above command. pyenv now allows you to expand upon this version. Let's start by installing another python version. For instance, let's go now to the cutting edge of python:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;~$ pyenv install 3.4.0
-Installing readline-6.3...
-Installed readline-6.3 to /home/staff/jmoreira/.pyenv/versions/3.4.0
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pyenv&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="n"&gt;Installing&lt;/span&gt; &lt;span class="n"&gt;readline&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Installed&lt;/span&gt; &lt;span class="n"&gt;readline&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;staff&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jmoreira&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pyenv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;versions&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
 
-Installing Python-3.4.0...
-Installed Python-3.4.0 to /home/staff/jmoreira/.pyenv/versions/3.4.0
+&lt;span class="n"&gt;Installing&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Installed&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;staff&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jmoreira&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pyenv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;versions&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;(By the way, there is no need to memorize these. &lt;code&gt;pyenv install -list&lt;/code&gt; will show all available Python versions to install).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;~$ pyenv versions
-* system (set by /home/staff/jmoreira/.pyenv/version)
-  3.4.0
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;~$ pyenv versions&lt;/span&gt;
+&lt;span class="err"&gt;* system (set by /home/staff/jmoreira/.pyenv/version)&lt;/span&gt;
+&lt;span class="err"&gt;  3.4.0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;pyenv now lists two python versions. To use python 3.4 as the global one we do:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pyenv global 3.4.0
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;pyenv global 3.4.0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;You can also use pyenv to define a project-specific, or local, version of Python:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;~$ pyenv global system
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pyenv&lt;/span&gt; &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="k"&gt;system&lt;/span&gt;
 
-~$ mkdir cuting_edge
-~$ cd cuting_edge/
-~/cutting_edge$ pyenv local 3.4.0
-~/cutting_edge$ python -V
-Python 3.4.0
-~/cutting_edge$ cd ..
-~$ python -V
-Python 2.7.6
+&lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="n"&gt;cuting_edge&lt;/span&gt;
+&lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;cuting_edge&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;cutting_edge$&lt;/span&gt; &lt;span class="n"&gt;pyenv&lt;/span&gt; &lt;span class="k"&gt;local&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;cutting_edge$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;V&lt;/span&gt;
+&lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;cutting_edge$&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="p"&gt;..&lt;/span&gt;
+&lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;V&lt;/span&gt;
+&lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -624,47 +624,47 @@ Python 2.7.6
 &lt;h2&gt;Virtual Environments&lt;/h2&gt;
 &lt;p&gt;To other virtualenv users, the idea of a local Python might seem familiar. Indeed, a local Python created from pyenv is almost like a Python virtual environment. The main difference is that pyenv actually copies an entire Python installation every time you create a new pyenv version. In contrast, virtualenv makes use of symbolic links to decrease the size of the virtualenv's.
 If you can't function without your virtual environments anymore then fear not, for there is a plugin for that: &lt;code&gt;pyenv-virtualenv&lt;/code&gt;. This plugin adds complete virtualenv functionality to pyenv:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
-source ~/.bashrc
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yyuu&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pyenv&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;virtualenv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pyenv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;plugins&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pyenv&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;virtualenv&lt;/span&gt;
+&lt;span class="k"&gt;source&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bashrc&lt;/span&gt;
 
-~$ mkdir virtual_env
-~$ cd virtual_env/
-~/virtual_env$ pyenv virtualenv 3.4.0 venv
-Ignoring indexes: https://pypi.python.org/simple/
-Requirement already satisfied (use --upgrade to upgrade): setuptools in /home/staff/jmoreira/.pyenv/versions/venv/lib/python3.4/site-packages
-Requirement already satisfied (use --upgrade to upgrade): pip in /home/staff/jmoreira/.pyenv/versions/venv/lib/python3.4/site-packages
-Cleaning up...
+&lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="n"&gt;virtual_env&lt;/span&gt;
+&lt;span class="o"&gt;~&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;virtual_env&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;virtual_env$&lt;/span&gt; &lt;span class="n"&gt;pyenv&lt;/span&gt; &lt;span class="n"&gt;virtualenv&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="n"&gt;Ignoring&lt;/span&gt; &lt;span class="n"&gt;indexes&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;pypi&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;simple&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="n"&gt;Requirement&lt;/span&gt; &lt;span class="n"&gt;already&lt;/span&gt; &lt;span class="n"&gt;satisfied&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="c1"&gt;--upgrade to upgrade): setuptools in /home/staff/jmoreira/.pyenv/versions/venv/lib/python3.4/site-packages&lt;/span&gt;
+&lt;span class="n"&gt;Requirement&lt;/span&gt; &lt;span class="n"&gt;already&lt;/span&gt; &lt;span class="n"&gt;satisfied&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="c1"&gt;--upgrade to upgrade): pip in /home/staff/jmoreira/.pyenv/versions/venv/lib/python3.4/site-packages&lt;/span&gt;
+&lt;span class="n"&gt;Cleaning&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
 
-~/virtual_env$ pyenv versions
-* system (set by /home/staff/jmoreira/.pyenv/version)
-  3.4.0
-  lab_web
-  venv
+&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;virtual_env$&lt;/span&gt; &lt;span class="n"&gt;pyenv&lt;/span&gt; &lt;span class="k"&gt;versions&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="k"&gt;system&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="k"&gt;by&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;staff&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jmoreira&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pyenv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;version&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+  &lt;span class="n"&gt;lab_web&lt;/span&gt;
+  &lt;span class="n"&gt;venv&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Here I used Python 3.4 to create the virtualenv (Note that if you want to create a virtualenv from the system Python, then virtualenv needs to be installed at the system level as well).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;~/virtual_env$ pyenv activate venv
-(venv) ~/virtual_env$ python -V
-Python 3.4.0
-(venv) ~/virtual_env$ pip list
-pip (1.5.4)
-setuptools (2.1)
-(venv) ~/virtual_env$ pyenv deactivate
-~/virtual_env
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;~/virtual_env$ pyenv activate venv&lt;/span&gt;
+&lt;span class="err"&gt;(venv) ~/virtual_env$ python -V&lt;/span&gt;
+&lt;span class="err"&gt;Python 3.4.0&lt;/span&gt;
+&lt;span class="err"&gt;(venv) ~/virtual_env$ pip list&lt;/span&gt;
+&lt;span class="err"&gt;pip (1.5.4)&lt;/span&gt;
+&lt;span class="err"&gt;setuptools (2.1)&lt;/span&gt;
+&lt;span class="err"&gt;(venv) ~/virtual_env$ pyenv deactivate&lt;/span&gt;
+&lt;span class="err"&gt;~/virtual_env&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;This last command is the recommended way to deactivate the virtualenv. This ensures that pyenv remains working as normal after you leave the virtualenv.&lt;/p&gt;
 &lt;p&gt;pyenv's magic works because it actually redefines your Python command:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;~$ which python
-/home/staff/jmoreira/.pyenv/shims/python
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;~$ which python&lt;/span&gt;
+&lt;span class="err"&gt;/home/staff/jmoreira/.pyenv/shims/python&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;When you try to run Python, it first looks for a &lt;code&gt;.python-version&lt;/code&gt; in the current directory to decide which version of python to run. If it doesn't find this file, then it looks for the user-level file &lt;code&gt;~/.pyenv/version&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;And this is essentially all there is to it. Have fun developing Python code in a safe, environment-friendly way.&lt;/p&gt;
-&lt;p&gt;Special thanks to &lt;a href="https://amaral.northwestern.edu/people/pah/"&gt;Adam Pah&lt;/a&gt; for the tips.&lt;/p&gt;</content><category term="pyenv"></category><category term="python"></category><category term="tutorial"></category></entry><entry><title>Fake mathematics is amazing</title><link href="https://jagmoreira.com/fake-mathematics-is-amazing.html" rel="alternate"></link><published>2014-03-07T00:00:00-06:00</published><updated>2014-03-07T00:00:00-06:00</updated><author><name>Joao Moreira</name></author><id>tag:jagmoreira.com,2014-03-07:/fake-mathematics-is-amazing.html</id><summary type="html">&lt;p&gt;How the apparently preposterous act of ignoring infinite values can sometimes lead to wondrous results.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently, quite by accident I discovered this fact:&lt;/p&gt;
+&lt;p&gt;Special thanks to &lt;a href="https://amaral.northwestern.edu/people/pah/"&gt;Adam Pah&lt;/a&gt; for the tips.&lt;/p&gt;</content><category term="Development"></category><category term="pyenv"></category><category term="python"></category><category term="tutorial"></category></entry><entry><title>Fake mathematics is amazing</title><link href="https://jagmoreira.com/fake-mathematics-is-amazing.html" rel="alternate"></link><published>2014-03-07T00:00:00-06:00</published><updated>2014-03-07T00:00:00-06:00</updated><author><name>Joao Moreira</name></author><id>tag:jagmoreira.com,2014-03-07:/fake-mathematics-is-amazing.html</id><summary type="html">&lt;p&gt;How the apparently preposterous act of ignoring infinite values can sometimes lead to wondrous results.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently, quite by accident I discovered this fact:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Divergent sum" src="https://jagmoreira.com/images/divergent_sum.png" title="What craziness is this?"&gt;&lt;/p&gt;
 &lt;p&gt;If you are a social network user (like a normal individual) you probably became aware of this "equality" through the by now viral video: &lt;a href="http://www.youtube.com/watch?v=w-I6XTVZXww"&gt;http://www.youtube.com/watch?v=w-I6XTVZXww&lt;/a&gt;. If you don't use the social webz very much (like me) this might be the first time you're seeing it (although, you might have found out about the video through the twitter announcement of this blog post, in which case, never mind). Go ahead, stare at it again. I'll make it easy for you:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Divergent sum" src="https://jagmoreira.com/images/divergent_sum.png" title="What craziness is this?"&gt;&lt;/p&gt;
@@ -678,4 +678,4 @@ setuptools (2.1)
 &lt;p&gt;What at first seems just some number mumbo-jumbo made to wow audiences is in fact a technique with many applications in science. The particular expression showcased here is used in string theory and &lt;a href="http://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%C2%B7_%C2%B7_%C2%B7#Physics"&gt;quantum electrodynamics&lt;/a&gt;. In 1971, Martinus J.G. Veltman and Gerardus 't Hooft, respectively professor and then graduate student in theoretical physics, used analytic continuation methods to renormalize Yang-Mills theory (particle physics stuff), a feat that would earn them the Nobel Prize in 1999. Only by ignoring divergences in intermediate calculations and daring to extend the validity of their expressions were they able to come to a final result with real-world applicability.&lt;/p&gt;
 &lt;p&gt;Simply put, there is nothing you can do with a value of "infinity". It ends your calculations, it keeps theories stuck and it can't be observed or otherwise measured. In short, infinities do not exist except in mathematicians' idealizations. So, clever humans that we are, we found a way around them: by replacing infinities with logical, self-consistent and much more useful values like the one from the above sum we can overcome difficulties in our calculations and try to advance the limits of human knowledge.&lt;/p&gt;
 &lt;p&gt;While mathematics can be used create wonderful tools for science, it is not, in itself a science. I like to think of it as an art form &amp;mdash; the art of creating beautiful, logical statements that need not have a concrete "physical" representation. Science is about the study of reality and as such if you find yourself proving that gravity is infinite at some point in space, speed is instantaneous or the number of universes is infinite, please do go back and re-check the tools you used. You may find that all you need is a little suspension of disbelief to come to the ultimate truth.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.slate.com/blogs/bad_astronomy/2014/01/18/follow_up_the_infinite_series_and_the_mind_blowing_result.html"&gt;Tumbling down the rabbit hole...&lt;/a&gt;&lt;/p&gt;</content><category term="math"></category></entry></feed>
+&lt;p&gt;&lt;a href="http://www.slate.com/blogs/bad_astronomy/2014/01/18/follow_up_the_infinite_series_and_the_mind_blowing_result.html"&gt;Tumbling down the rabbit hole...&lt;/a&gt;&lt;/p&gt;</content><category term="Random"></category><category term="math"></category></entry></feed>
