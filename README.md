@@ -20,7 +20,7 @@ I use the [ghp-import](https://github.com/davisp/ghp-import) package to easily p
 
 Then, just make sure to add the **output** folder to the `.gitignore` to prevent from accidentally commiting it to the **develop** branch.
 
-The `pelican-quickstart` script will ask you once for all necessary parameters and then will create a `gh-pages` Invoke task that automates the process even more:
+The `pelican-quickstart` script will ask you once for all necessary parameters and then will create a `gh-pages` [Invoke](https://www.pyinvoke.org/) task that automates the process even more:
 
     $ invoke gh-pages
 
