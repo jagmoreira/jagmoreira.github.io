@@ -6,15 +6,15 @@ Summary: How the apparently preposterous act of ignoring infinite values can som
 
 Recently, quite by accident I discovered this fact:
 
-![Divergent sum]({filename}/images/divergent_sum.png "What craziness is this?")
+![Divergent sum]({static}/images/divergent_sum.png "What craziness is this?")
 
 If you are a social network user (like a normal individual) you probably became aware of this "equality" through the by now viral video: [http://www.youtube.com/watch?v=w-I6XTVZXww](http://www.youtube.com/watch?v=w-I6XTVZXww). If you don't use the social webz very much (like me) this might be the first time you're seeing it (although, you might have found out about the video through the twitter announcement of this blog post, in which case, never mind). Go ahead, stare at it again. I'll make it easy for you:
 
-![Divergent sum]({filename}/images/divergent_sum.png "What craziness is this?")
+![Divergent sum]({static}/images/divergent_sum.png "What craziness is this?")
 
 I know, right? If you studied divergent series in colleges you are probably squirming in your seat and starting to enter a deep state of denial and thinking "How can he make such a preposterous claim?" Allow me to do so again:
 
-![Divergent sum]({filename}/images/divergent_sum.png "What craziness is this?")
+![Divergent sum]({static}/images/divergent_sum.png "What craziness is this?")
 
 Don't worry I haven't forgotten my math. The above expression, although valid, is not actually a true equality, at least not in the same formal sense that 1+1=2. In fact, it's not even a new expression. It has been known since the mid-1800s and a mathematician named [Srinivasa Ramanujan](http://en.wikipedia.org/wiki/Srinivasa_Ramanujan) was ([arguably](http://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%C2%B7_%C2%B7_%C2%B7#History)) the first to arrive at the odd value of -1/12 using a strange type of [summation](http://en.wikipedia.org/wiki/Ramanujan_summation) that allows one to assign a value to divergent series. Another way to get at the result is using the super cool Riemman zeta function **Z(s)**:
 

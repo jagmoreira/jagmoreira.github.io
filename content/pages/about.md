@@ -8,7 +8,7 @@ I've contributed to [skelebot](https://github.com/carsdotcom/skelebot/), an awes
 
 I have a PhD from Northwestern University. My research involved quantifying the effect of gender diversity in creative (scientific and film) teams. I found that work by more diverse teams tends to have a higher impact, and that concentration of power in small homogeneous groups of leaders can lead to an overall gender discrimination.
 
-Here's a PDF copy of my [resumé]({filename}/pdfs/resume.pdf) (last updated: 2020-03-28).
+Here's a PDF copy of my [resumé]({static}/pdfs/resume.pdf) (last updated: 2020-03-28).
 
 When I'm not working or obsessing about some new skill or technique, I like to explore the seemingly never-ending culinary options of Chicago, read Iron Man comics and science fiction novels, and re-watch Seinfeld episodes.
 

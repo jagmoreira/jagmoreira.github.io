@@ -10,15 +10,15 @@ I had been thinking for a while about creating a LaTeX CV/resumé, so this was t
 
 The most appealing template I found was the [Fancy CV](https://www.sharelatex.com/templates/cv-or-resume/fancy-cv), also called by Friggeri CV, originally released by [Adrian Friggeri](https://github.com/afriggeri):
 
-![Original Fancy CV]({filename}/images/fanci_cv.png)
+![Original Fancy CV]({static}/images/fanci_cv.png)
 
 While the original template is no longer on GitHub, many people have created their own version. Most notably, [Nadorrano](https://github.com/Nadorrano) created [CV-Friggeri-X](https://github.com/Nadorrano/cv-friggeri-x), a variation on the original Fancy CV that uses only open source fonts and adds glyphs for contact info.
 
-![Friggeri-X CV]({filename}/images/cv_friggeri_x.png)
+![Friggeri-X CV]({static}/images/cv_friggeri_x.png)
 
 Now, I could have used this template to write my CV... but, I didn't like the glyphs, nor the contact info on the side. So, I did some more searching and found another really awesome template called [Awesome-CV](https://github.com/posquit0/Awesome-CV) by [posquit0](https://github.com/posquit0)
 
-![Awesome CV]({filename}/images/awesome_cv.png)
+![Awesome CV]({static}/images/awesome_cv.png)
 
 Now that is a cool header!
 
@@ -26,7 +26,7 @@ I knew I wanted this header but I liked the 2-column layout of the Friggeri-X te
 
 Introducing... the [Friggen-Awesome CV](https://github.com/jagmoreira/Friggen-Awesome-CV):
 
-![Friggen-Awesome CV]({filename}/images/friggen_awesome_cv.png)
+![Friggen-Awesome CV]({static}/images/friggen_awesome_cv.png)
 
 It has a 2-column layout, like the Fancy CV, and a header much like the one in the Awesome CV. It also uses only open source fonts (Roboto for text and FontAwesome for glyphs) and allows you to choose from A4 or Letter paper size. You can find more detailed info in the [template repo](https://github.com/jagmoreira/Friggen-Awesome-CV).
 
@@ -34,6 +34,6 @@ It was great fun creating this template. While I didn't create it from scratch, 
 
 I hope this template will be of great use to others, specially those currently looking for jobs. If you find something broken, have a criticism or some suggestion for improvement, please do submit an [issue](https://github.com/jagmoreira/Friggen-Awesome-CV/issues) or [pull request](https://github.com/jagmoreira/Friggen-Awesome-CV/pulls) on GitHub.
 
-Also, if you are reading this blog and want to learn more about me, here's my own friggen' awesome [resumé]({filename}/pdfs/resume.pdf). :-)
+Also, if you are reading this blog and want to learn more about me, here's my own friggen' awesome [resumé]({static}/pdfs/resume.pdf). :-)
 
 Many thanks to [Nadorrano](https://github.com/Nadorrano) and [posquit0](https://github.com/posquit0), the creators of [CV-Friggeri-X](https://github.com/Nadorrano/cv-friggeri-x) and [Awesome-CV](https://github.com/posquit0/Awesome-CV), respectively, and also to [Adrian Friggeri](https://github.com/afriggeri) for creating the original [Fancy CV](https://www.sharelatex.com/templates/cv-or-resume/fancy-cv).

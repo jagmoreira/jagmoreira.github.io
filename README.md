@@ -20,27 +20,11 @@ I use the [ghp-import](https://github.com/davisp/ghp-import) package to easily p
 
 Then, just make sure to add the **output** folder to the `.gitignore` to prevent from accidentally commiting it to the **develop** branch.
 
-The `pelican-quickstart` script will ask you once for all necessary parameters and then will create a `gh-pages` Fabric task that automates the process even more: `$ fab gh_pages`.
+The `pelican-quickstart` script will ask you once for all necessary parameters and then will create a `gh-pages` Invoke task that automates the process even more:
 
-By default, `ghp-import` will commit your new build with the message *"Update Documentation"*, which is not very useful. I modified the default `gh_pages` Fabric task to add the current date on commit:
+    $ invoke gh-pages
 
-```python
-import datetime
-
-# Github Pages configuration
-env.github_pages_branch = 'master'
-env.commit_message = "'Publish site on {}'".format(datetime.date.today().isoformat())
-
-(...)
-
-def gh_pages():
-    """Publish to GitHub Pages"""
-    rebuild()
-    local('ghp-import -b {github_pages_branch} '
-          '-m {commit_message} '
-          '{deploy_path} -p'.format(**env))
-```
-
+This task will commit your new build the current date.
 
 ## Development workflow
 
@@ -50,4 +34,4 @@ def gh_pages():
 
 1. Commit and push all changes on **develop** branch: `$ git commit -am "..."; git push`
 
-1. Re-build website and push **output** directory to **master** branch: `$ fab gh_pages`
+1. Re-build website and push **output** directory to **master** branch: `$ invoke gh-pages`

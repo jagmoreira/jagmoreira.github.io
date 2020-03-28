@@ -343,7 +343,7 @@ Also, if you're scratching your head at the rsync `--include` syntax... I've bee
 
 #### Installing pyenv
 
-I work mainly with python so I include [pyenv](https://github.com/yyuu/pyenv) in my setup script. Instead of being dependent on whichever version ship with the OS, with `pyenv` I can have concurrent, self-contained, python installations. If you're interested in trying it out check out [my pyenv tutorial]({filename}pyenv-tutorial.md)!
+I work mainly with python so I include [pyenv](https://github.com/yyuu/pyenv) in my setup script. Instead of being dependent on whichever version ship with the OS, with `pyenv` I can have concurrent, self-contained, python installations. If you're interested in trying it out check out [my pyenv tutorial]({filename}./pyenv-tutorial.md)!
 
 Fortunately pyenv has an automatic installer, so we just need one more line in our install script:
 
