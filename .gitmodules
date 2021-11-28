@@ -1,6 +1,6 @@
 [submodule "pelican-hyde"]
 	path = pelican-hyde
-	url = git@github.com:jagmoreira/pelican-hyde.git
+	url = https://github.com/jagmoreira/pelican-hyde.git
 [submodule "pelican-plugins"]
 	path = pelican-plugins
 	url = https://github.com/getpelican/pelican-plugins.git
