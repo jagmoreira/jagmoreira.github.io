@@ -23,11 +23,13 @@ On a Mac replace `.bashrc` with `.bash_profile` below.
 ### pyenv Suite Installer
 This is the one-liner provided by the [automatic installer](https://github.com/yyuu/pyenv-installer).
 
+    :::shell
     curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 
 
 ## Walkthrough
 
+    :::shell
     ~$ pyenv global
     system
     ~$ pyenv versions
@@ -35,6 +37,7 @@ This is the one-liner provided by the [automatic installer](https://github.com/y
 
 Usually you will only have one version of python installed, the system-wide version. That's what's shown in the above command. pyenv now allows you to expand upon this version. Let's start by installing another python version. For instance, let's go now to the cutting edge of python:
 
+    :::shell
     ~$ pyenv install 3.4.0
     Installing readline-6.3...
     Installed readline-6.3 to /home/staff/jmoreira/.pyenv/versions/3.4.0
@@ -44,6 +47,7 @@ Usually you will only have one version of python installed, the system-wide vers
 
 (By the way, there is no need to memorize these. `pyenv install -list` will show all available Python versions to install).
 
+    :::shell
     ~$ pyenv versions
     * system (set by /home/staff/jmoreira/.pyenv/version)
       3.4.0
@@ -54,6 +58,7 @@ pyenv now lists two python versions. To use python 3.4 as the global one we do:
 
 You can also use pyenv to define a project-specific, or local, version of Python:
 
+    :::shell
     ~$ pyenv global system
 
     ~$ mkdir cuting_edge
@@ -73,6 +78,7 @@ It's as simple as that.
 To other virtualenv users, the idea of a local Python might seem familiar. Indeed, a local Python created from pyenv is almost like a Python virtual environment. The main difference is that pyenv actually copies an entire Python installation every time you create a new pyenv version. In contrast, virtualenv makes use of symbolic links to decrease the size of the virtualenv's.
 If you can't function without your virtual environments anymore then fear not, for there is a plugin for that: `pyenv-virtualenv`. This plugin adds complete virtualenv functionality to pyenv:
 
+    :::shell
     git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
     source ~/.bashrc
 
@@ -92,6 +98,7 @@ If you can't function without your virtual environments anymore then fear not, f
 
 Here I used Python 3.4 to create the virtualenv (Note that if you want to create a virtualenv from the system Python, then virtualenv needs to be installed at the system level as well).
 
+    :::shell
     ~/virtual_env$ pyenv activate venv
     (venv) ~/virtual_env$ python -V
     Python 3.4.0
@@ -105,6 +112,7 @@ This last command is the recommended way to deactivate the virtualenv. This ensu
 
 pyenv's magic works because it actually redefines your Python command:
 
+    :::shell
     ~$ which python
     /home/staff/jmoreira/.pyenv/shims/python
 
