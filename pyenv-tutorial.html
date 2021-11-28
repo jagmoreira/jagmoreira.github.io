@@ -101,32 +101,32 @@
 
 <h3>pyenv Suite Installer</h3>
 <p>This is the one-liner provided by the <a href="https://github.com/yyuu/pyenv-installer">automatic installer</a>.</p>
-<div class="highlight"><pre><span></span><span class="err">curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash</span>
+<div class="highlight"><pre><span></span>curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer <span class="p">|</span> bash
 </pre></div>
 
 
 <h2>Walkthrough</h2>
-<div class="highlight"><pre><span></span><span class="err">~$ pyenv global</span>
-<span class="err">system</span>
-<span class="err">~$ pyenv versions</span>
-<span class="err">* system (set by /home/staff/jmoreira/.pyenv/version)</span>
+<div class="highlight"><pre><span></span>~$ pyenv global
+system
+~$ pyenv versions
+* system <span class="o">(</span><span class="nb">set</span> by /home/staff/jmoreira/.pyenv/version<span class="o">)</span>
 </pre></div>
 
 
 <p>Usually you will only have one version of python installed, the system-wide version. That's what's shown in the above command. pyenv now allows you to expand upon this version. Let's start by installing another python version. For instance, let's go now to the cutting edge of python:</p>
-<div class="highlight"><pre><span></span><span class="o">~</span><span class="err">$</span> <span class="n">pyenv</span> <span class="n">install</span> <span class="mi">3</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
-<span class="n">Installing</span> <span class="n">readline</span><span class="o">-</span><span class="mi">6</span><span class="p">.</span><span class="mi">3</span><span class="p">...</span>
-<span class="n">Installed</span> <span class="n">readline</span><span class="o">-</span><span class="mi">6</span><span class="p">.</span><span class="mi">3</span> <span class="k">to</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">staff</span><span class="o">/</span><span class="n">jmoreira</span><span class="o">/</span><span class="p">.</span><span class="n">pyenv</span><span class="o">/</span><span class="k">versions</span><span class="o">/</span><span class="mi">3</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
+<div class="highlight"><pre><span></span>~$ pyenv install <span class="m">3</span>.4.0
+Installing readline-6.3...
+Installed readline-6.3 to /home/staff/jmoreira/.pyenv/versions/3.4.0
 
-<span class="n">Installing</span> <span class="n">Python</span><span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="p">...</span>
-<span class="n">Installed</span> <span class="n">Python</span><span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span> <span class="k">to</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">staff</span><span class="o">/</span><span class="n">jmoreira</span><span class="o">/</span><span class="p">.</span><span class="n">pyenv</span><span class="o">/</span><span class="k">versions</span><span class="o">/</span><span class="mi">3</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
+Installing Python-3.4.0...
+Installed Python-3.4.0 to /home/staff/jmoreira/.pyenv/versions/3.4.0
 </pre></div>
 
 
 <p>(By the way, there is no need to memorize these. <code>pyenv install -list</code> will show all available Python versions to install).</p>
-<div class="highlight"><pre><span></span><span class="err">~$ pyenv versions</span>
-<span class="err">* system (set by /home/staff/jmoreira/.pyenv/version)</span>
-<span class="err">  3.4.0</span>
+<div class="highlight"><pre><span></span>~$ pyenv versions
+* system <span class="o">(</span><span class="nb">set</span> by /home/staff/jmoreira/.pyenv/version<span class="o">)</span>
+  <span class="m">3</span>.4.0
 </pre></div>
 
 
@@ -136,16 +136,16 @@
 
 
 <p>You can also use pyenv to define a project-specific, or local, version of Python:</p>
-<div class="highlight"><pre><span></span><span class="o">~</span><span class="err">$</span> <span class="n">pyenv</span> <span class="k">global</span> <span class="k">system</span>
+<div class="highlight"><pre><span></span>~$ pyenv global system
 
-<span class="o">~</span><span class="err">$</span> <span class="n">mkdir</span> <span class="n">cuting_edge</span>
-<span class="o">~</span><span class="err">$</span> <span class="n">cd</span> <span class="n">cuting_edge</span><span class="o">/</span>
-<span class="o">~/</span><span class="n">cutting_edge$</span> <span class="n">pyenv</span> <span class="k">local</span> <span class="mi">3</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
-<span class="o">~/</span><span class="n">cutting_edge$</span> <span class="n">python</span> <span class="o">-</span><span class="n">V</span>
-<span class="n">Python</span> <span class="mi">3</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
-<span class="o">~/</span><span class="n">cutting_edge$</span> <span class="n">cd</span> <span class="p">..</span>
-<span class="o">~</span><span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">V</span>
-<span class="n">Python</span> <span class="mi">2</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">6</span>
+~$ mkdir cuting_edge
+~$ <span class="nb">cd</span> cuting_edge/
+~/cutting_edge$ pyenv <span class="nb">local</span> <span class="m">3</span>.4.0
+~/cutting_edge$ python -V
+Python <span class="m">3</span>.4.0
+~/cutting_edge$ <span class="nb">cd</span> ..
+~$ python -V
+Python <span class="m">2</span>.7.6
 </pre></div>
 
 
@@ -153,41 +153,41 @@
 <h2>Virtual Environments</h2>
 <p>To other virtualenv users, the idea of a local Python might seem familiar. Indeed, a local Python created from pyenv is almost like a Python virtual environment. The main difference is that pyenv actually copies an entire Python installation every time you create a new pyenv version. In contrast, virtualenv makes use of symbolic links to decrease the size of the virtualenv's.
 If you can't function without your virtual environments anymore then fear not, for there is a plugin for that: <code>pyenv-virtualenv</code>. This plugin adds complete virtualenv functionality to pyenv:</p>
-<div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">yyuu</span><span class="o">/</span><span class="n">pyenv</span><span class="o">-</span><span class="n">virtualenv</span><span class="p">.</span><span class="n">git</span> <span class="o">~/</span><span class="p">.</span><span class="n">pyenv</span><span class="o">/</span><span class="n">plugins</span><span class="o">/</span><span class="n">pyenv</span><span class="o">-</span><span class="n">virtualenv</span>
-<span class="k">source</span> <span class="o">~/</span><span class="p">.</span><span class="n">bashrc</span>
+<div class="highlight"><pre><span></span>git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+<span class="nb">source</span> ~/.bashrc
 
-<span class="o">~</span><span class="err">$</span> <span class="n">mkdir</span> <span class="n">virtual_env</span>
-<span class="o">~</span><span class="err">$</span> <span class="n">cd</span> <span class="n">virtual_env</span><span class="o">/</span>
-<span class="o">~/</span><span class="n">virtual_env$</span> <span class="n">pyenv</span> <span class="n">virtualenv</span> <span class="mi">3</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span> <span class="n">venv</span>
-<span class="n">Ignoring</span> <span class="n">indexes</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="p">.</span><span class="n">python</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="k">simple</span><span class="o">/</span>
-<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span> <span class="p">(</span><span class="n">use</span> <span class="c1">--upgrade to upgrade): setuptools in /home/staff/jmoreira/.pyenv/versions/venv/lib/python3.4/site-packages</span>
-<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span> <span class="p">(</span><span class="n">use</span> <span class="c1">--upgrade to upgrade): pip in /home/staff/jmoreira/.pyenv/versions/venv/lib/python3.4/site-packages</span>
-<span class="n">Cleaning</span> <span class="n">up</span><span class="p">...</span>
+~$ mkdir virtual_env
+~$ <span class="nb">cd</span> virtual_env/
+~/virtual_env$ pyenv virtualenv <span class="m">3</span>.4.0 venv
+Ignoring indexes: https://pypi.python.org/simple/
+Requirement already satisfied <span class="o">(</span>use --upgrade to upgrade<span class="o">)</span>: setuptools in /home/staff/jmoreira/.pyenv/versions/venv/lib/python3.4/site-packages
+Requirement already satisfied <span class="o">(</span>use --upgrade to upgrade<span class="o">)</span>: pip in /home/staff/jmoreira/.pyenv/versions/venv/lib/python3.4/site-packages
+Cleaning up...
 
-<span class="o">~/</span><span class="n">virtual_env$</span> <span class="n">pyenv</span> <span class="k">versions</span>
-<span class="o">*</span> <span class="k">system</span> <span class="p">(</span><span class="k">set</span> <span class="k">by</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">staff</span><span class="o">/</span><span class="n">jmoreira</span><span class="o">/</span><span class="p">.</span><span class="n">pyenv</span><span class="o">/</span><span class="k">version</span><span class="p">)</span>
-  <span class="mi">3</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
-  <span class="n">lab_web</span>
-  <span class="n">venv</span>
+~/virtual_env$ pyenv versions
+* system <span class="o">(</span><span class="nb">set</span> by /home/staff/jmoreira/.pyenv/version<span class="o">)</span>
+  <span class="m">3</span>.4.0
+  lab_web
+  venv
 </pre></div>
 
 
 <p>Here I used Python 3.4 to create the virtualenv (Note that if you want to create a virtualenv from the system Python, then virtualenv needs to be installed at the system level as well).</p>
-<div class="highlight"><pre><span></span><span class="err">~/virtual_env$ pyenv activate venv</span>
-<span class="err">(venv) ~/virtual_env$ python -V</span>
-<span class="err">Python 3.4.0</span>
-<span class="err">(venv) ~/virtual_env$ pip list</span>
-<span class="err">pip (1.5.4)</span>
-<span class="err">setuptools (2.1)</span>
-<span class="err">(venv) ~/virtual_env$ pyenv deactivate</span>
-<span class="err">~/virtual_env</span>
+<div class="highlight"><pre><span></span>~/virtual_env$ pyenv activate venv
+<span class="o">(</span>venv<span class="o">)</span> ~/virtual_env$ python -V
+Python <span class="m">3</span>.4.0
+<span class="o">(</span>venv<span class="o">)</span> ~/virtual_env$ pip list
+pip <span class="o">(</span><span class="m">1</span>.5.4<span class="o">)</span>
+setuptools <span class="o">(</span><span class="m">2</span>.1<span class="o">)</span>
+<span class="o">(</span>venv<span class="o">)</span> ~/virtual_env$ pyenv deactivate
+~/virtual_env
 </pre></div>
 
 
 <p>This last command is the recommended way to deactivate the virtualenv. This ensures that pyenv remains working as normal after you leave the virtualenv.</p>
 <p>pyenv's magic works because it actually redefines your Python command:</p>
-<div class="highlight"><pre><span></span><span class="err">~$ which python</span>
-<span class="err">/home/staff/jmoreira/.pyenv/shims/python</span>
+<div class="highlight"><pre><span></span>~$ which python
+/home/staff/jmoreira/.pyenv/shims/python
 </pre></div>
 
 
