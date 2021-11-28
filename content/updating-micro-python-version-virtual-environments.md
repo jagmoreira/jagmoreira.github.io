@@ -17,6 +17,7 @@ Since virtualenvs are typically only tied to a **A.B** version, we can improve t
 
 I use pyenv (link) to manage all my version of python, so if I wanted to update the micro version of one of my 3.5.1 projects:
 
+    :::shell
     $ pyenv versions
       system
       3.5.1
@@ -24,17 +25,20 @@ I use pyenv (link) to manage all my version of python, so if I wanted to update 
 
 First I install the latest 3.5.x version:
 
+    :::shell
     $ pyenv install 3.5.3
     (...)
 
 Then I save the packages list of the virtualenvs packages:
 
+    :::shell
     $ pyenv shell proj
     (proj)$ pip freeze > proj_requirements.pip
     (proj)$ pyenv shell --unset
 
 Now I can safely remove the old 3.5.1 `proj`, and create a new `proj` based on 3.5.3:
 
+    :::shell
     $ pyenv uninstall proj
     (...)
     $ pyenv virtualenv 3.5.3 proj
@@ -43,6 +47,7 @@ Now I can safely remove the old 3.5.1 `proj`, and create a new `proj` based on 3
 
 Finally I install the packages again to the new venv:
 
+    :::shell
     $ pyenv shell proj
     (proj)$ pip install -r proj_requirements.pip
 
@@ -56,6 +61,7 @@ And voilá.
 
 If you don't use the base 3.5.1 you can now safely uninstall it:
 
+    :::shell
     $ pyenv uninstall 3.5.1
 
 

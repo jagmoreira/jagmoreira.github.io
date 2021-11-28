@@ -54,6 +54,7 @@ Usually you will only have one version of python installed, the system-wide vers
 
 pyenv now lists two python versions. To use python 3.4 as the global one we do:
 
+    :::shell
     pyenv global 3.4.0
 
 You can also use pyenv to define a project-specific, or local, version of Python:
