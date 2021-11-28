@@ -602,7 +602,7 @@ Installed Python-3.4.0 to /home/staff/jmoreira/.pyenv/versions/3.4.0
 
 
 &lt;p&gt;pyenv now lists two python versions. To use python 3.4 as the global one we do:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;pyenv global 3.4.0&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pyenv global &lt;span class="m"&gt;3&lt;/span&gt;.4.0
 &lt;/pre&gt;&lt;/div&gt;
 
 
