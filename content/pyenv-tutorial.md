@@ -4,7 +4,7 @@ Category: Development
 Tags: pyenv, python, tutorial
 Summary: Meet pyenv: a simple Python version management tool.
 
-Meet [pyenv](https://github.com/yyuu/pyenv): a simple Python version management tool. Previously known as Pythonbrew, pyenv lets you change the global Python version, install multiple Python versions, set directory (project)-specific Python versions, and yes create/manage virtual python environments ("virtualenv's"). All this is done on *NIX-style machines (Linux and OS X) without depending on Python itself and it works at the user-level–no need for any `sudo` commands. So let's start!
+Meet [pyenv](https://github.com/yyuu/pyenv): a simple Python version management tool. Previously known as Pythonbrew, pyenv lets you change the global Python version, install multiple Python versions, set directory (project)-specific Python versions, and yes create/manage virtual python environments ("virtualenv's"). All this is done on \*NIX-style machines (Linux and OS X) without depending on Python itself and it works at the user-level–no need for any `sudo` commands. So let's start!
 
 ## Installation
 Follow the [installation instructions](https://github.com/yyuu/pyenv#installation) or use the [automatic installer](https://github.com/yyuu/pyenv-installer). If you're using a Mac, I highly recommend installing pyenv with [Homebrew](https://github.com/yyuu/pyenv#homebrew-on-mac-os-x) (none of that MacPorts shenanigans). Whichever way you decide to go, after checking out the repository, be sure to add a couple of lines to your `.bashrc` (`.bash_profile` on Mac) to enable pyenv's auto-complete functionality.
